@@ -7,7 +7,7 @@ export const metadata: Metadata = createMetadata({
   title: 'Gallery',
   description: 'Explore our travel photo gallery and memories',
   keywords: ['gallery', 'photos', 'travel images', 'memories'],
-  path: '/gallery',
+  url: '/gallery',
 });
 
 export default function GalleryPage() {
