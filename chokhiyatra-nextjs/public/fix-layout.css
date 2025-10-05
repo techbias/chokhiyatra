@@ -2,70 +2,70 @@
 
 /* IMPORTANT: ScrollSmoother container should NOT have z-index to avoid stacking context */
 #scrollSmoother-container {
-  position: relative;
-  /* Removed z-index to prevent stacking context issues */
+position: relative;
+/* Removed z-index to prevent stacking context issues */
 }
 
 /* Footer should be positioned normally - NEVER fixed or absolute */
 footer {
-  position: static !important;
-  /* No background - transparent like original */
-  clear: both;
-  /* Fix scroll glitching in footer */
-  will-change: auto;
-  transform: translateZ(0);
-  backface-visibility: hidden;
-  /* Ensure it flows naturally after content */
-  margin-top: 0 !important;
-  top: auto !important;
-  bottom: auto !important;
-  left: auto !important;
-  right: auto !important;
+position: static !important;
+/* No background - transparent like original */
+clear: both;
+/* Fix scroll glitching in footer */
+will-change: auto;
+transform: translateZ(0);
+backface-visibility: hidden;
+/* Ensure it flows naturally after content */
+margin-top: 0 !important;
+top: auto !important;
+bottom: auto !important;
+left: auto !important;
+right: auto !important;
 }
 
 /* Remove z-index from content sections - let normal flow work */
 .cta-area {
-  position: relative !important;
-  margin-bottom: 2rem;
+position: relative !important;
+margin-bottom: 2rem;
 }
 
 .instagram-area {
-  position: relative !important;
-  padding-bottom: 3rem;
-  margin-bottom: 2rem;
-  background: transparent;
+position: relative !important;
+padding-bottom: 3rem;
+margin-bottom: 2rem;
+background: transparent;
 }
 
 /* Prevent ScrollSmoother from pinning sections over footer */
 #scrollSmoother-container > *:last-child {
-  margin-bottom: 0 !important;
-  padding-bottom: 0 !important;
+margin-bottom: 0 !important;
+padding-bottom: 0 !important;
 }
 
 /* Ensure smooth scroll container doesn't cause overlap */
 body {
-  overflow-x: hidden;
+overflow-x: hidden;
 }
 
 /* Fix advance gallery horizontal scroll */
 .advance-area {
-  overflow-x: hidden;
-  position: relative;
+overflow-x: hidden;
+position: relative;
 }
 
 .advance-wrap,
 .advance-two-wrap {
-  display: flex;
-  width: max-content;
-  gap: 1rem;
+display: flex;
+width: max-content;
+gap: 1rem;
 }
 
 .advance-two-item {
-  flex-shrink: 0;
+flex-shrink: 0;
 }
 
 /* Ensure content sections don't overlap */
 section {
-  position: relative;
-  z-index: 1;
+position: relative;
+z-index: 1;
 }

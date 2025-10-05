@@ -48,7 +48,7 @@ const Footer: React.FC = () => {
                           height={24}
                         />
                       </span>
-                      <span className="text-white fw-bold">Donate Now</span>
+                      <span className="text-white fw-bold">Connect Now</span>
                     </span>
                     <i className="tw-btn-circle-dot"></i>
                   </Link>

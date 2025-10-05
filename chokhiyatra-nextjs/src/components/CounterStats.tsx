@@ -48,6 +48,18 @@ export default function CounterStats() {
     fetchStats();
   }, []);
 
+  // Reinitialize purecounter after stats load
+  useEffect(() => {
+    if (!loading && stats.length > 0) {
+      // Wait for DOM to update
+      setTimeout(() => {
+        if (typeof window !== 'undefined' && (window as any).PureCounter) {
+          new (window as any).PureCounter();
+        }
+      }, 100);
+    }
+  }, [loading, stats]);
+
   if (loading) {
     return (
       <section className="counter-two-area position-relative z-1">

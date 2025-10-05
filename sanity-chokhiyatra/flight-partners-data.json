@@ -1,0 +1,359 @@
+[
+  {
+    "_type": "flightPartner",
+    "name": "IndiGo",
+    "webCheckinUrl": "https://www.goindigo.in/web-check-in.html",
+    "featured": true,
+    "order": 1
+  },
+  {
+    "_type": "flightPartner",
+    "name": "SpiceJet",
+    "webCheckinUrl": "https://www.spicejet.com/web-checkin.aspx",
+    "featured": true,
+    "order": 2
+  },
+  {
+    "_type": "flightPartner",
+    "name": "Air Asia",
+    "webCheckinUrl": "https://www.airasia.com/check-in/en/gb",
+    "featured": true,
+    "order": 3
+  },
+  {
+    "_type": "flightPartner",
+    "name": "Emirates",
+    "webCheckinUrl": "https://www.emirates.com/in/english/manage-booking/online-check-in/",
+    "featured": true,
+    "order": 4
+  },
+  {
+    "_type": "flightPartner",
+    "name": "British Airways",
+    "webCheckinUrl": "https://www.britishairways.com/travel/olcilandingpageauthreq/public/en_in",
+    "featured": true,
+    "order": 5
+  },
+  {
+    "_type": "flightPartner",
+    "name": "Etihad Airways",
+    "webCheckinUrl": "https://www.etihad.com/en-in/fly-etihad/check-in",
+    "featured": true,
+    "order": 6
+  },
+  {
+    "_type": "flightPartner",
+    "name": "United Airlines",
+    "webCheckinUrl": "https://www.united.com/en/us/checkin",
+    "featured": true,
+    "order": 7
+  },
+  {
+    "_type": "flightPartner",
+    "name": "easyJet",
+    "webCheckinUrl": "https://www.easyjet.com/en/check-in",
+    "featured": false,
+    "order": 8
+  },
+  {
+    "_type": "flightPartner",
+    "name": "Qatar Airways",
+    "webCheckinUrl": "https://www.qatarairways.com/en/manage/check-in.html",
+    "featured": false,
+    "order": 9
+  },
+  {
+    "_type": "flightPartner",
+    "name": "Singapore Airlines",
+    "webCheckinUrl": "https://www.singaporeair.com/en_UK/plan-travel/booking/check-in/",
+    "featured": false,
+    "order": 10
+  },
+  {
+    "_type": "flightPartner",
+    "name": "Jeju Air",
+    "webCheckinUrl": "https://www.jejuair.net/en/main.do",
+    "featured": false,
+    "order": 11
+  },
+  {
+    "_type": "flightPartner",
+    "name": "Spring Airlines",
+    "webCheckinUrl": "https://en.ch.com/",
+    "featured": false,
+    "order": 12
+  },
+  {
+    "_type": "flightPartner",
+    "name": "American Airlines",
+    "webCheckinUrl": "https://www.aa.com/homePage.do",
+    "featured": false,
+    "order": 13
+  },
+  {
+    "_type": "flightPartner",
+    "name": "Air Canada",
+    "webCheckinUrl": "https://www.aircanada.com/ca/en/aco/home/book/travel-options/check-in.html",
+    "featured": false,
+    "order": 14
+  },
+  {
+    "_type": "flightPartner",
+    "name": "Air France",
+    "webCheckinUrl": "https://www.airfrance.in/IN/en/local/core/engine/echeckin/ECheckinHomeAction.do",
+    "featured": false,
+    "order": 15
+  },
+  {
+    "_type": "flightPartner",
+    "name": "Aeromexico",
+    "webCheckinUrl": "https://aeromexico.com/en-us/travel-information/check-in/web-check-in",
+    "featured": false,
+    "order": 16
+  },
+  {
+    "_type": "flightPartner",
+    "name": "Alaska Airlines",
+    "webCheckinUrl": "https://www.alaskaair.com/shopping/check-in",
+    "featured": false,
+    "order": 17
+  },
+  {
+    "_type": "flightPartner",
+    "name": "Avianca",
+    "webCheckinUrl": "https://www.avianca.com/in/en/experience/check-in/",
+    "featured": false,
+    "order": 18
+  },
+  {
+    "_type": "flightPartner",
+    "name": "Finnair",
+    "webCheckinUrl": "https://www.finnair.com/en/info/check-in",
+    "featured": false,
+    "order": 19
+  },
+  {
+    "_type": "flightPartner",
+    "name": "ITA Airways",
+    "webCheckinUrl": "https://www.ita-airways.com/en_gb/fly-ita/online-check-in.html",
+    "featured": false,
+    "order": 20
+  },
+  {
+    "_type": "flightPartner",
+    "name": "Biman Bangladesh Airlines",
+    "webCheckinUrl": "https://www.biman-airlines.com/",
+    "featured": false,
+    "order": 21
+  },
+  {
+    "_type": "flightPartner",
+    "name": "Air China",
+    "webCheckinUrl": "https://www.airchina.com.cn/en/info/check-in-guide/",
+    "featured": false,
+    "order": 22
+  },
+  {
+    "_type": "flightPartner",
+    "name": "Cathay Pacific Airways",
+    "webCheckinUrl": "https://www.cathaypacific.com/cx/en_IN/travel-information/flying-with-us/at-the-airport/check-in.html",
+    "featured": false,
+    "order": 23
+  },
+  {
+    "_type": "flightPartner",
+    "name": "Cyprus Airways",
+    "webCheckinUrl": "https://www.cyprusairways.com/",
+    "featured": false,
+    "order": 24
+  },
+  {
+    "_type": "flightPartner",
+    "name": "Delta Airlines",
+    "webCheckinUrl": "https://www.delta.com/mytrips/",
+    "featured": false,
+    "order": 25
+  },
+  {
+    "_type": "flightPartner",
+    "name": "Eurowings",
+    "webCheckinUrl": "https://www.eurowings.com/en/information/at-the-airport/check-in.html",
+    "featured": false,
+    "order": 26
+  },
+  {
+    "_type": "flightPartner",
+    "name": "FlyDubai",
+    "webCheckinUrl": "https://www.flydubai.com/en/plan/check-in",
+    "featured": false,
+    "order": 27
+  },
+  {
+    "_type": "flightPartner",
+    "name": "Gulf Air",
+    "webCheckinUrl": "https://www.gulfair.com/checkin",
+    "featured": false,
+    "order": 28
+  },
+  {
+    "_type": "flightPartner",
+    "name": "Hawaiian Airlines",
+    "webCheckinUrl": "https://www.hawaiianairlines.com/check-in",
+    "featured": false,
+    "order": 29
+  },
+  {
+    "_type": "flightPartner",
+    "name": "Iberia",
+    "webCheckinUrl": "https://www.iberia.com/in/web-check-in/",
+    "featured": false,
+    "order": 30
+  },
+  {
+    "_type": "flightPartner",
+    "name": "Spring Japan",
+    "webCheckinUrl": "https://en.springairlines.com/",
+    "featured": false,
+    "order": 31
+  },
+  {
+    "_type": "flightPartner",
+    "name": "Japan Airlines",
+    "webCheckinUrl": "https://www.jal.co.jp/en/inter/boarding/checkin/",
+    "featured": false,
+    "order": 32
+  },
+  {
+    "_type": "flightPartner",
+    "name": "Korean Air",
+    "webCheckinUrl": "https://www.koreanair.com/global/en/traveling/check-in-flight.html",
+    "featured": false,
+    "order": 33
+  },
+  {
+    "_type": "flightPartner",
+    "name": "Lufthansa",
+    "webCheckinUrl": "https://www.lufthansa.com/in/en/online-check-in",
+    "featured": false,
+    "order": 34
+  },
+  {
+    "_type": "flightPartner",
+    "name": "Jet2",
+    "webCheckinUrl": "https://www.jet2.com/check-in",
+    "featured": false,
+    "order": 35
+  },
+  {
+    "_type": "flightPartner",
+    "name": "Swiss",
+    "webCheckinUrl": "https://www.swiss.com/in/en/prepare/check-in",
+    "featured": false,
+    "order": 36
+  },
+  {
+    "_type": "flightPartner",
+    "name": "All Nippon Airways",
+    "webCheckinUrl": "https://www.ana.co.jp/en/in/book-plan/checkin/",
+    "featured": false,
+    "order": 37
+  },
+  {
+    "_type": "flightPartner",
+    "name": "Pegasus Airlines",
+    "webCheckinUrl": "https://www.flypgs.com/en/online-check-in",
+    "featured": false,
+    "order": 38
+  },
+  {
+    "_type": "flightPartner",
+    "name": "Philippine Airlines",
+    "webCheckinUrl": "https://www.philippineairlines.com/en/in/home/covid-19/managetrips/checkin",
+    "featured": false,
+    "order": 39
+  },
+  {
+    "_type": "flightPartner",
+    "name": "Qantas Airways",
+    "webCheckinUrl": "https://www.qantas.com/in/en/book-a-trip/check-in.html",
+    "featured": false,
+    "order": 40
+  },
+  {
+    "_type": "flightPartner",
+    "name": "South African Airways",
+    "webCheckinUrl": "https://www.flysaa.com/",
+    "featured": false,
+    "order": 41
+  },
+  {
+    "_type": "flightPartner",
+    "name": "Thai Airways",
+    "webCheckinUrl": "https://www.thaiairways.com/en_IN/plan_my_trip/check_in/index.page",
+    "featured": false,
+    "order": 42
+  },
+  {
+    "_type": "flightPartner",
+    "name": "Turkish Airlines",
+    "webCheckinUrl": "https://www.turkishairlines.com/en-in/any-questions/online-check-in/",
+    "featured": false,
+    "order": 43
+  },
+  {
+    "_type": "flightPartner",
+    "name": "TAP Air Portugal",
+    "webCheckinUrl": "https://www.flytap.com/en-in/check-in",
+    "featured": false,
+    "order": 44
+  },
+  {
+    "_type": "flightPartner",
+    "name": "Scoot",
+    "webCheckinUrl": "https://www.flyscoot.com/en/plan/check-in",
+    "featured": false,
+    "order": 45
+  },
+  {
+    "_type": "flightPartner",
+    "name": "SriLankan Airlines",
+    "webCheckinUrl": "https://www.srilankan.com/en_uk/plan-and-book/check-in",
+    "featured": false,
+    "order": 46
+  },
+  {
+    "_type": "flightPartner",
+    "name": "Air Europa",
+    "webCheckinUrl": "https://www.aireuropa.com/en/flights/online-check-in",
+    "featured": false,
+    "order": 47
+  },
+  {
+    "_type": "flightPartner",
+    "name": "Vietjet Aviation",
+    "webCheckinUrl": "https://www.vietjetair.com/Sites/Web/en-US/CheckIn/CheckInIndexNew",
+    "featured": false,
+    "order": 48
+  },
+  {
+    "_type": "flightPartner",
+    "name": "Wizz Air UK",
+    "webCheckinUrl": "https://wizzair.com/en-gb/information-and-services/booking-information/check-in",
+    "featured": false,
+    "order": 49
+  },
+  {
+    "_type": "flightPartner",
+    "name": "Oman Air",
+    "webCheckinUrl": "https://www.omanair.com/in/en/check-in",
+    "featured": false,
+    "order": 50
+  },
+  {
+    "_type": "flightPartner",
+    "name": "Norse Atlantic UK",
+    "webCheckinUrl": "https://www.flynorse.com/en-gb/checkin",
+    "featured": false,
+    "order": 51
+  }
+]

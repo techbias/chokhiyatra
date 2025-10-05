@@ -6900,20 +6900,20 @@ input:focus, input:focus-visible {
 /* ================================= preload Css End ===========================  */
 /* ============= Header Start Here ======================= */
 .header {
-    padding: 26px 70px;
+    padding: 16px 70px;
     position: relative;
     z-index: 2;
 }
 
 @media screen and (max-width: 1699px) {
     .header {
-        padding: 26px 20px;
+        padding: 16px 20px;
     }
 }
 
 @media screen and (max-width: 1199px) {
     .header {
-        padding: 26px 0;
+        padding: 16px 0;
     }
 }
 
@@ -8495,6 +8495,10 @@ input:focus, input:focus-visible {
 
 .testimonial-two-area {
     background: linear-gradient(180deg, rgba(255, 255, 255, 0.23) 0%, #ccf1ff 100%);
+}
+
+.testimonial-two-wrapper {
+    gap: 20px !important;
 }
 
 @media screen and (max-width: 767px) {

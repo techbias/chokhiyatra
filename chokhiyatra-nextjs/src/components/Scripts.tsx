@@ -137,7 +137,7 @@ export default function Scripts() {
       />
 
       {/* Footer animation glitch fix */}
-      <Script
+      {/* <Script
         src="/fix-footer-animations.js"
         strategy="lazyOnload"
       /> */}

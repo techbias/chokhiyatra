@@ -3,6 +3,11 @@ import { createMetadata } from '@/lib/metadata';
 import PageLayout from '@/components/PageLayout';
 import HeroSlider from '@/components/HeroSlider';
 import TourPackages from '@/components/TourPackages';
+import AdvanceGallery from '@/components/AdvanceGallery';
+import CounterStats from '@/components/CounterStats';
+import HotelPartners from '@/components/HotelPartners';
+import FlightPartners from '@/components/FlightPartners';
+import Testimonials from '@/components/Testimonials';
 import BannerBackup from '@/components/backup/BannerBackup';
 
 export const metadata: Metadata = createMetadata({
@@ -103,41 +108,7 @@ export default function HomePage() {
       </div>
 
       {/* Advance Gallery Section */}
-      <div className="advance-area py-140 position-relative z-1">
-        <div className="container-fluid">
-          <div className="row">
-            <div className="col-xl-12">
-              <div className="advance-wrap advance-two-wrap">
-                <div className="advance-two-item">
-                  <div className="advance-two-thumb">
-                    <img src="assets/images/advance/advance-two-thumb1.jpg" alt="thumb" />
-                  </div>
-                </div>
-                <div className="advance-two-item">
-                  <div className="advance-two-thumb">
-                    <img src="assets/images/advance/advance-two-thumb2.jpg" alt="thumb" />
-                  </div>
-                </div>
-                <div className="advance-two-item">
-                  <div className="advance-two-thumb">
-                    <img src="assets/images/advance/advance-two-thumb3.jpg" alt="thumb" />
-                  </div>
-                </div>
-                <div className="advance-two-item">
-                  <div className="advance-two-thumb">
-                    <img src="assets/images/advance/advance-two-thumb4.jpg" alt="thumb" />
-                  </div>
-                </div>
-                <div className="advance-two-item">
-                  <div className="advance-two-thumb">
-                    <img src="assets/images/advance/advance-two-thumb5.jpg" alt="thumb" />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <AdvanceGallery />
 
       {/* ChokhiYatra Intro Section */}
       <section className="position-relative z-1">
@@ -147,10 +118,9 @@ export default function HomePage() {
               <div className="text-center">
                 <h2 className="ChokhiYatra-title fw-normal tw-mb-5">ChokhiYatra</h2>
                 <div className="ChokhiYatra-content tp-cursor-point-area">
-                  <h6 className="ChokhiYatra-text fw-normal">we <span className="fw-bold">believe</span>
-                    that a clean space is happy space. Founded in <span
-                      className="fw-bold">1998</span>, our mission is to make homes & businesses
-                    sparkle while...</h6>
+                  <h6 className="ChokhiYatra-text fw-normal">Your <span className="fw-bold">trusted travel partner</span> since <span
+                      className="fw-bold">2009</span>, making every journey simple, affordable, and truly memorable. Travel with us, because every trip deserves to be special.
+                  </h6>
                 </div>
               </div>
             </div>
@@ -301,171 +271,9 @@ export default function HomePage() {
         </div>
       </section>
 
+
       {/* Tour Packages Section */}
-      <section className="pb-140 position-relative z-1">
-        <div className="container">
-          <div className="row justify-content-center">
-            <div className="col-xl-8">
-              <div className="section-wrapper text-center tw-mb-10" data-aos="fade-up"
-                data-aos-duration="1000" data-aos-delay="200">
-                <h6 className="section-subtitle font-sofia tw-text-2xl fw-normal tw-mb-4">advance tour
-                  plan</h6>
-                <h2 className="section-title fw-normal tw-mb-7 char-animation"> Shelter of Love,
-                  Compassion,
-                  and New Beginnings</h2>
-                <p className="section-paragraph tw-text-lg fw-normal">communication and utilizes cutting
-                  edge logistic planning to get your shipment completed
-                  on time. itself founded of backgrounds, which simply.</p>
-              </div>
-            </div>
-          </div>
-          <div className="row">
-            <div className="col-xl-12">
-              <div className="service-two-slider">
-                <div className="service-two-active swiper-container">
-                  <div className="swiper-wrapper">
-                    <div className="service-two-wrapper bg-white tw-p-4 tw-rounded-xl tw-mb-8 swiper-slide"
-                      data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
-                      <div className="service-two-thumb tw-mb-5">
-                        <a href="package-details.html"><img className="tw-rounded-xl w-100"
-                          src="assets/images/service/service-two-thumb1.jpg"
-                          alt="thumb" /></a>
-                      </div>
-                      <div className="service-two-content tw-px-2 tw-mb-2">
-                        <span className="service-two-location"><i className="ph ph-map-pin"></i>
-                          Delhi, India</span>
-                        <h4 className="tw-text-8 fw-normal text-capitalize tw-mb-2"><a
-                          className="hover-text-secondary"
-                          href="package-details.html">Every Life Matters</a></h4>
-                        <p className="service-two-paragraph tw-mb-5">We provide daily meals
-                          and run food drives to ensure child or elder in our
-                          community goes to bed.</p>
-                        <div className="service-two-wrap tw-rounded-xl tw-py-4 tw-px-6">
-                          <div
-                            className="service-two-star d-flex tw-gap-6 tw-pb-4 tw-mb-6">
-                            <span className="text-main-600 fw-medium d-flex tw-gap-2"><i
-                              className="ph ph-star"></i> 5.00 (334)</span>
-                            <span className="text-main-600 fw-medium">8 Nights - 9
-                              Days</span>
-                          </div>
-                          <div
-                            className="d-flex align-items-center justify-content-between flex-wrap row-gap-3">
-                            <div className="service-two-price">
-                              <h6>$589.00</h6>
-                              <p>/ Per Person</p>
-                            </div>
-                            <div>
-                              <a className="font-heading tw-text-sm text-uppercase text-main-600 fw-bold hover-text-secondary"
-                                href="package-details.html">EXPLORE MORE <i
-                                  className="tw-text-base ph ph-arrow-up-right"></i></a>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="service-two-wrapper bg-white tw-p-4 tw-rounded-xl tw-mb-8 swiper-slide"
-                      data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
-                      <div className="service-two-thumb tw-mb-5">
-                        <a href="package-details.html"><img className="tw-rounded-xl w-100"
-                          src="assets/images/service/service-two-thumb2.jpg"
-                          alt="thumb" /></a>
-                      </div>
-                      <div className="service-two-content tw-px-2 tw-mb-2">
-                        <span className="service-two-location"><i className="ph ph-map-pin"></i>
-                          Delhi, India</span>
-                        <h4 className="tw-text-8 fw-normal text-capitalize tw-mb-2"><a
-                          className="hover-text-secondary"
-                          href="package-details.html">Compassion in Action</a></h4>
-                        <p className="service-two-paragraph tw-mb-5">We provide daily meals
-                          and run food drives to ensure child or elder in our
-                          community goes to bed.</p>
-                        <div className="service-two-wrap tw-rounded-xl tw-py-4 tw-px-6">
-                          <div
-                            className="service-two-star d-flex tw-gap-6 tw-pb-4 tw-mb-6">
-                            <span className="text-main-600 fw-medium d-flex tw-gap-2"><i
-                              className="ph ph-star"></i> 5.00 (334)</span>
-                            <span className="text-main-600 fw-medium">8 Nights - 9
-                              Days</span>
-                          </div>
-                          <div
-                            className="d-flex align-items-center justify-content-between flex-wrap row-gap-3">
-                            <div className="service-two-price">
-                              <h6>$689.00</h6>
-                              <p>/ Per Person</p>
-                            </div>
-                            <div>
-                              <a className="font-heading tw-text-sm text-uppercase text-main-600 fw-bold hover-text-secondary"
-                                href="package-details.html">EXPLORE MORE <i
-                                  className="tw-text-base ph ph-arrow-up-right"></i></a>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="service-two-wrapper bg-white tw-p-4 tw-rounded-xl tw-mb-8 swiper-slide"
-                      data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
-                      <div className="service-two-thumb tw-mb-5">
-                        <a href="package-details.html"><img className="tw-rounded-xl w-100"
-                          src="assets/images/service/service-two-thumb3.jpg"
-                          alt="thumb" /></a>
-                      </div>
-                      <div className="service-two-content tw-px-2 tw-mb-2">
-                        <span className="service-two-location"><i className="ph ph-map-pin"></i>
-                          Delhi, India</span>
-                        <h4 className="tw-text-8 fw-normal text-capitalize tw-mb-2"><a
-                          className="hover-text-secondary"
-                          href="package-details.html">Hope for Tomorrow</a></h4>
-                        <p className="service-two-paragraph tw-mb-5">We provide daily meals
-                          and run food drives to ensure child or elder in our
-                          community goes to bed.</p>
-                        <div className="service-two-wrap tw-rounded-xl tw-py-4 tw-px-6">
-                          <div
-                            className="service-two-star d-flex tw-gap-6 tw-pb-4 tw-mb-6">
-                            <span className="text-main-600 fw-medium d-flex tw-gap-2"><i
-                              className="ph ph-star"></i> 5.00 (334)</span>
-                            <span className="text-main-600 fw-medium">8 Nights - 9
-                              Days</span>
-                          </div>
-                          <div
-                            className="d-flex align-items-center justify-content-between flex-wrap row-gap-3">
-                            <div className="service-two-price">
-                              <h6>$789.00</h6>
-                              <p>/ Per Person</p>
-                            </div>
-                            <div>
-                              <a className="font-heading tw-text-sm text-uppercase text-main-600 fw-bold hover-text-secondary"
-                                href="package-details.html">EXPLORE MORE <i
-                                  className="tw-text-base ph ph-arrow-up-right"></i></a>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="service-two-plane-shape position-absolute top-50 start-0 translate-middle-y z-n1">
-          <div className="line_shape">
-            <svg width="1920" height="287" viewBox="0 0 1920 287" fill="none"
-              xmlns="http://www.w3.org/2000/svg">
-              <path id="line_path_2"
-                d="M0 286C235.807 161.804 715.277 -31.6361 948 104C1192.5 246.5 1698.62 102.064 1920 1"
-                stroke="#CEC7BE" strokeDasharray="4 4" />
-              <g id="paper-plane_2">
-                <path d="M8.52862 0.643979C8.65472 0.654731 12.5944 5.1037 15.7327 8.66873C16.0616 8.64319 16.3357 8.62234 16.3357 8.62234L16.6797 8.10704L19.1766 7.91312L19.3247 9.82093L16.9109 10.0082C17.5051 10.6843 18.0375 11.2905 18.4682 11.7814C21.1362 11.6535 26.2869 11.419 27.1597 11.4798C28.3465 11.5623 30.0418 12.128 30.0368 12.5126C30.0318 12.8972 28.4581 13.7513 27.5404 14.0673C26.8454 14.3064 21.1236 14.8358 18.3473 15.0812C17.9672 15.7098 17.5181 16.4498 17.0277 17.2557L19.8851 17.0334L20.0333 18.9412L17.5364 19.1351L17.1173 18.6791C17.1173 18.6791 16.5828 18.7209 16.1125 18.7568C13.4463 23.1189 10.1742 28.3838 9.92358 28.3613C9.49623 28.3236 8.49302 27.2688 8.49302 27.2688L9.96254 22.7816C9.52126 22.7861 9.19671 22.7262 9.18859 22.6259C9.17946 22.5123 9.58103 22.3871 10.1098 22.3303L10.8472 20.079C10.5083 20.0669 10.2756 20.0104 10.2686 19.9261C10.2611 19.828 10.5617 19.7202 10.9855 19.6563L12.4419 15.2098L6.2911 15.3333L3.00246 20.403L1.50247 20.2363L2.61746 15.6496L4.02107 15.0837C4.02107 15.0837 2.47224 15.1697 2.47782 14.7758C2.4834 14.3819 3.85476 14.0784 3.85476 14.0784L2.61875 13.8202L0.562775 9.68354L2.55228 8.81392L6.31432 13.4946L12.3097 12.4928L10.3991 8.9086C9.84767 8.93961 9.41072 8.87701 9.4014 8.76046C9.39341 8.6582 9.71898 8.54567 10.1719 8.48324L9.06011 6.39696C9.04924 6.39738 9.03867 6.39894 9.02779 6.39936C8.42442 6.44647 7.92762 6.38376 7.91735 6.25891C7.90894 6.14578 8.30449 6.02093 8.82844 5.96421L6.75475 2.07323C6.75475 2.07323 8.31696 0.625839 8.5282 0.6447L8.52862 0.643979Z"
-                  fill="#113A75" />
-              </g>
-            </svg>
-          </div>
-        </div>
-        <div>
-          <img className="testimonial-bg-shape position-absolute start-0 z-n1"
-            src="assets/images/testimonial/testimonial-bg-shape.png" alt="shape" />
-        </div>
-      </section>
+      <TourPackages />
 
       {/* Tour Categories Section */}
       <section className="catagori-area py-140 position-relative z-1">
@@ -635,148 +443,13 @@ export default function HomePage() {
       </section>
 
       {/* Counter Section */}
-      <section className="counter-two-area position-relative z-1">
-        <div className="container">
-          <div className="row justify-content-center">
-            <div className="col-xl-10">
-              <div className="row">
-                <div className="col-xl-3 col-lg-6 col-md-6 col-sm-6">
-                  <div className="counter-wrap text-center tw-mb-8" data-aos="fade-up"
-                    data-aos-duration="1000" data-aos-delay="200">
-                    <div className="counter-content">
-                      <h2 className="counter-title counter-two-title fw-semibold"><span
-                        className="purecounter" data-purecounter-duration="1"
-                        data-purecounter-end="145"></span></h2>
-                      <p
-                        className="counter-paragraph counter-two-paragraph tw-text-3xl tw-text-505 fw-bold text-capitalize">
-                        Travel Tales</p>
-                    </div>
-                  </div>
-                </div>
-                <div className="col-xl-3 col-lg-6 col-md-6 col-sm-6">
-                  <div className="counter-wrap text-center tw-mb-8" data-aos="fade-up"
-                    data-aos-duration="1000" data-aos-delay="300">
-                    <div className="counter-content">
-                      <h2 className="counter-title counter-two-title fw-semibold"><span
-                        className="purecounter" data-purecounter-duration="1"
-                        data-purecounter-end="74"></span></h2>
-                      <p
-                        className="counter-paragraph counter-two-paragraph tw-text-3xl tw-text-505 fw-bold text-capitalize">
-                        Journey Bound</p>
-                    </div>
-                  </div>
-                </div>
-                <div className="col-xl-3 col-lg-6 col-md-6 col-sm-6">
-                  <div className="counter-wrap text-center tw-mb-8" data-aos="fade-up"
-                    data-aos-duration="1000" data-aos-delay="400">
-                    <div className="counter-content">
-                      <h2 className="counter-title counter-two-title fw-semibold"><span
-                        className="purecounter" data-purecounter-duration="1"
-                        data-purecounter-end="134"></span></h2>
-                      <p
-                        className="counter-paragraph counter-two-paragraph tw-text-3xl tw-text-505 fw-bold text-capitalize">
-                        Miles Away</p>
-                    </div>
-                  </div>
-                </div>
-                <div className="col-xl-3 col-lg-6 col-md-6 col-sm-6">
-                  <div className="counter-wrap text-center tw-mb-8" data-aos="fade-up"
-                    data-aos-duration="1000" data-aos-delay="500">
-                    <div className="counter-content">
-                      <h2 className="counter-title counter-two-title fw-semibold"><span
-                        className="purecounter" data-purecounter-duration="1"
-                        data-purecounter-end="85"></span></h2>
-                      <p
-                        className="counter-paragraph counter-two-paragraph tw-text-3xl tw-text-505 fw-bold text-capitalize">
-                        Escape Route</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="counter-two-shape position-absolute start-0 bottom-0 z-n1 w-100">
-          <img className="w-100" src="assets/images/counter/counter-two-shape.png" alt="shape" />
-        </div>
-      </section>
+      <CounterStats />
 
-      {/* Brand Partners Section */}
-      <section className="brand-area py-140">
-        <div className="container">
-          <div className="row">
-            <div className="col-xl-4">
-              <div className="section-wrapper tw-mb-19" data-aos="fade-up" data-aos-duration="1000"
-                data-aos-delay="200">
-                <h6 className="section-subtitle font-sofia tw-text-2xl fw-normal tw-mb-4">brand partner
-                </h6>
-                <h2 className="section-title fw-normal tw-mb-5 char-animation">Our Partners</h2>
-                <p className="section-paragraph tw-text-lg fw-normal">communication and utilizes cutting
-                  edge logistic
-                  on time. itself founded of backgrounds, which.</p>
-              </div>
-            </div>
-            <div className="col-xl-8">
-              <div className="row">
-                <div className="col-xl-3 col-lg-3 col-md-4 col-sm-6">
-                  <div className="brand-wrapper d-flex align-items-center justify-content-center cursor-pointer tw-mb-8 bg-white tw-py-10 tw-rounded-xl position-relative"
-                    data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
-                    <span className="brand-active-media"><img
-                      src="assets/images/brand/brand-thumb1.png" alt="thumb" /></span>
-                    <span className="brand-hover-media"><img
-                      src="assets/images/brand/brand-thumb11.png" alt="thumb" /></span>
-                  </div>
-                </div>
-                <div className="col-xl-3 col-lg-3 col-md-4 col-sm-6">
-                  <div className="brand-wrapper d-flex align-items-center justify-content-center cursor-pointer tw-mb-8 bg-white tw-py-10 tw-rounded-xl position-relative"
-                    data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
-                    <span className="brand-active-media"><img
-                      src="assets/images/brand/brand-thumb2.png" alt="thumb" /></span>
-                    <span className="brand-hover-media"><img
-                      src="assets/images/brand/brand-thumb22.png" alt="thumb" /></span>
-                  </div>
-                </div>
-                <div className="col-xl-3 col-lg-3 col-md-4 col-sm-6">
-                  <div className="brand-wrapper d-flex align-items-center justify-content-center cursor-pointer tw-mb-8 bg-white tw-py-10 tw-rounded-xl position-relative"
-                    data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
-                    <span className="brand-active-media"><img
-                      src="assets/images/brand/brand-thumb3.png" alt="thumb" /></span>
-                    <span className="brand-hover-media"><img
-                      src="assets/images/brand/brand-thumb33.png" alt="thumb" /></span>
-                  </div>
-                </div>
-                <div className="col-xl-3 col-lg-3 col-md-4 col-sm-6">
-                  <div className="brand-wrapper d-flex align-items-center justify-content-center cursor-pointer tw-mb-8 bg-white tw-py-10 tw-rounded-xl position-relative"
-                    data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
-                    <span className="brand-active-media"><img
-                      src="assets/images/brand/brand-thumb4.png" alt="thumb" /></span>
-                    <span className="brand-hover-media"><img
-                      src="assets/images/brand/brand-thumb44.png" alt="thumb" /></span>
-                  </div>
-                </div>
-                <div className="col-xl-3 col-lg-3 col-md-4 col-sm-6">
-                  <div className="brand-wrapper d-flex align-items-center justify-content-center cursor-pointer tw-mb-8 bg-white tw-py-10 tw-rounded-xl position-relative"
-                    data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">
-                    <span className="brand-active-media"><img
-                      src="assets/images/brand/brand-thumb5.png" alt="thumb" /></span>
-                    <span className="brand-hover-media"><img
-                      src="assets/images/brand/brand-thumb55.png" alt="thumb" /></span>
-                  </div>
-                </div>
-                <div className="col-xl-3 col-lg-3 col-md-4 col-sm-6">
-                  <div className="brand-wrapper d-flex align-items-center justify-content-center cursor-pointer tw-mb-8 bg-white tw-py-10 tw-rounded-xl position-relative"
-                    data-aos="fade-up" data-aos-duration="1000" data-aos-delay="700">
-                    <span className="brand-active-media"><img
-                      src="assets/images/brand/brand-thumb6.png" alt="thumb" /></span>
-                    <span className="brand-hover-media"><img
-                      src="assets/images/brand/brand-thumb66.png" alt="thumb" /></span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* Hotel Partners Section */}
+      <HotelPartners />
+
+      {/* Flight Partners Section */}
+      <FlightPartners />
 
       {/* Testimonials Section */}
       <section className="testimonial-two-area pb-140">

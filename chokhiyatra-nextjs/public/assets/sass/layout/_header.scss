@@ -1,13 +1,13 @@
 /* ============= Header Start Here ======================= */
 .header {
-    padding: 26px 70px;
+    padding: 16px 70px;
     position: relative;
     z-index: 2;
     @include xxxxl-screen {
-        padding: 26px 20px;
+        padding: 16px 20px;
     }
     @include lg-screen {
-        padding: 26px 0;
+        padding: 16px 0;
     }
     @include md-screen {
         padding: 10px 0;

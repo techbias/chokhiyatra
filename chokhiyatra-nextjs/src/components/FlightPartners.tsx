@@ -60,15 +60,17 @@ export default function FlightPartners() {
 
   if (partners.length === 0) {
     return (
-      <section className="flight-partners-area py-140 bg-light">
+      <section className="brand-area py-140 bg-light">
         <div className="container">
-          <div className="text-center">
-            <div className="section-wrapper tw-mb-10" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
-              <h6 className="section-subtitle font-sofia tw-text-2xl fw-normal tw-mb-4">flight partner</h6>
-              <h2 className="section-title fw-normal tw-mb-5 char-animation">Our Flight Partners</h2>
-              <p className="section-paragraph tw-text-lg fw-normal">
-                Add flight partners in Sanity Studio to display them here.
-              </p>
+          <div className="row">
+            <div className="col-xl-4">
+              <div className="section-wrapper tw-mb-19" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                <h6 className="section-subtitle font-sofia tw-text-2xl fw-normal tw-mb-4">flight partner</h6>
+                <h2 className="section-title fw-normal tw-mb-5 char-animation">Our Flight Partners</h2>
+                <p className="section-paragraph tw-text-lg fw-normal">
+                  Add flight partners in Sanity Studio to display them here.
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -77,91 +79,85 @@ export default function FlightPartners() {
   }
 
   return (
-    <section className="flight-partners-area py-140 bg-light">
+    <section className="brand-area py-140 bg-light">
       <div className="container">
-        <div className="text-center">
-          <div className="section-wrapper tw-mb-10" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
-            <h6 className="section-subtitle font-sofia tw-text-2xl fw-normal tw-mb-4">flight partner</h6>
-            <h2 className="section-title fw-normal tw-mb-5 char-animation">Our Flight Partners</h2>
-            <p className="section-paragraph tw-text-lg fw-normal">
-              Book flights with our trusted airline partners for the best travel experience.
-            </p>
+        <div className="row">
+          {/* Content on left */}
+          <div className="col-xl-4">
+            <div className="section-wrapper tw-mb-19" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+              <h6 className="section-subtitle font-sofia tw-text-2xl fw-normal tw-mb-4">flight partner</h6>
+              <h2 className="section-title fw-normal tw-mb-5 char-animation">Our Flight Partners</h2>
+              <p className="section-paragraph tw-text-lg fw-normal">
+                Book flights with our trusted airline partners for the best travel experience.
+              </p>
+            </div>
           </div>
-        </div>
 
-        <div className="row justify-content-center">
-          {partners.map((partner, index) => {
-            const logoUrl = partner.logo?.asset
-              ? urlFor(partner.logo).width(180).height(90).url()
-              : 'assets/images/brand/brand-thumb1.png';
+          {/* Logos on right */}
+          <div className="col-xl-8">
+            <div className="row">
+              {partners.map((partner, index) => {
+                const logoUrl = partner.logo?.asset
+                  ? urlFor(partner.logo).url()
+                  : 'assets/images/brand/brand-thumb1.png';
 
-            const PartnerElement = partner.webCheckinUrl ? 'a' : 'div';
-            const elementProps = partner.webCheckinUrl
-              ? { href: partner.webCheckinUrl, target: '_blank', rel: 'noopener noreferrer' }
-              : {};
+                const PartnerElement = partner.webCheckinUrl ? 'a' : 'div';
+                const elementProps = partner.webCheckinUrl
+                  ? { href: partner.webCheckinUrl, target: '_blank', rel: 'noopener noreferrer' }
+                  : {};
 
-            return (
-              <div key={partner._id} className="col-xl-2 col-lg-3 col-md-4 col-sm-6">
-                <PartnerElement
-                  {...elementProps}
-                  className="flight-partner-card d-flex flex-column align-items-center justify-content-center tw-mb-8 bg-white tw-p-6 tw-rounded-xl position-relative transition-all"
-                  data-aos="fade-up"
-                  data-aos-duration="1000"
-                  data-aos-delay={200 + index * 100}
-                >
-                  <div className="flight-partner-logo tw-mb-3">
-                    <img src={logoUrl} alt={partner.name} className="w-100" />
+                return (
+                  <div key={partner._id} className="col-xl-3 col-lg-3 col-md-4 col-sm-6">
+                    <PartnerElement
+                      {...elementProps}
+                      className="brand-wrapper flight-partner-wrapper d-flex align-items-center justify-content-center cursor-pointer tw-mb-8 bg-white tw-py-10 tw-rounded-xl position-relative"
+                      data-aos="fade-up"
+                      data-aos-duration="1000"
+                      data-aos-delay={200 + index * 100}
+                    >
+                      <span className="brand-active-media">
+                        <img src={logoUrl} alt={partner.name} />
+                      </span>
+                    </PartnerElement>
                   </div>
-                  <h6 className="flight-partner-name tw-text-sm fw-medium text-center tw-mb-0">
-                    {partner.name}
-                  </h6>
-                  {partner.webCheckinUrl && (
-                    <span className="tw-text-xs text-main-600 tw-mt-2">
-                      <i className="ph ph-arrow-up-right"></i> Web Check-in
-                    </span>
-                  )}
-                </PartnerElement>
-              </div>
-            );
-          })}
+                );
+              })}
+            </div>
+          </div>
         </div>
       </div>
 
       <style jsx>{`
-        .flight-partners-area {
+        .bg-light {
           background-color: #f8f9fa;
         }
 
-        .flight-partner-card {
-          min-height: 180px;
+        .flight-partner-wrapper {
           transition: all 0.3s ease;
           text-decoration: none;
           color: inherit;
-          display: flex;
-          border: 1px solid transparent;
+          min-height: 100px;
+          padding: 12px;
         }
 
-        .flight-partner-card:hover {
+        .flight-partner-wrapper:hover {
           transform: translateY(-5px);
           box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-          border-color: var(--main-600);
         }
 
-        .flight-partner-logo {
-          height: 60px;
-          display: flex;
-          align-items: center;
-          justify-content: center;
+        .flight-partner-wrapper:hover .brand-active-media {
+          opacity: 1 !important;
+          visibility: visible !important;
+          transform: translateY(0) !important;
         }
 
-        .flight-partner-logo img {
-          max-height: 100%;
-          max-width: 100%;
-          object-fit: contain;
-        }
-
-        .transition-all {
-          transition: all 0.3s ease;
+        @media (max-width: 1199px) {
+          .order-xl-1 {
+            order: 1;
+          }
+          .order-xl-2 {
+            order: 2;
+          }
         }
       `}</style>
     </section>

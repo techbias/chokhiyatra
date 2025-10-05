@@ -95,11 +95,11 @@ export default function HotelPartners() {
             <div className="row">
               {partners.map((partner, index) => {
                 const logoUrl = partner.logo?.asset
-                  ? urlFor(partner.logo).width(200).height(100).url()
+                  ? urlFor(partner.logo).url()
                   : 'assets/images/brand/brand-thumb1.png';
 
                 const hoverLogoUrl = partner.hoverLogo?.asset
-                  ? urlFor(partner.hoverLogo).width(200).height(100).url()
+                  ? urlFor(partner.hoverLogo).url()
                   : logoUrl;
 
                 return (
@@ -110,11 +110,11 @@ export default function HotelPartners() {
                       data-aos-duration="1000"
                       data-aos-delay={200 + index * 100}
                     >
-                      <span className="brand-active-media">
-                        <img src={logoUrl} alt={partner.name} />
+                      <span className="brand-active-media d-flex align-items-center justify-content-center" style={{ width: '100%', height: '80px', padding: '10px' }}>
+                        <img src={logoUrl} alt={partner.name} style={{ maxWidth: '100%', maxHeight: '100%', objectFit: 'contain' }} />
                       </span>
-                      <span className="brand-hover-media">
-                        <img src={hoverLogoUrl} alt={partner.name} />
+                      <span className="brand-hover-media d-flex align-items-center justify-content-center" style={{ width: '100%', height: '80px', padding: '10px' }}>
+                        <img src={hoverLogoUrl} alt={partner.name} style={{ maxWidth: '100%', maxHeight: '100%', objectFit: 'contain' }} />
                       </span>
                     </div>
                   </div>
