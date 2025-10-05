@@ -1,0 +1,29 @@
+{
+  "name": "chokhiyatra-nextjs",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "postbuild": "next-sitemap"
+  },
+  "dependencies": {
+    "@sanity/client": "^7.12.0",
+    "@sanity/image-url": "^1.2.0",
+    "@sanity/vision": "^4.10.2",
+    "next": "^14.2.0",
+    "next-sanity": "^11.4.2",
+    "react": "^18.3.0",
+    "react-dom": "^18.3.0",
+    "sanity": "^4.10.2"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "next-sitemap": "^4.2.3",
+    "typescript": "^5"
+  }
+}

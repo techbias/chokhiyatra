@@ -1,0 +1,23 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx create-next-app:*)",
+      "Bash(mkdir:*)",
+      "Bash(npm init:*)",
+      "Bash(npm install)",
+      "Bash(npm install:*)",
+      "Bash(xcopy:*)",
+      "Bash(robocopy:*)",
+      "Bash(dir)",
+      "Bash(test:*)",
+      "Bash(mv:*)",
+      "Bash(rmdir:*)",
+      "Read(//d/Clients/**)",
+      "Bash(npm create:*)",
+      "Bash(node:*)",
+      "Bash(curl -s \"https://i8rl0x39.api.sanity.io/v2024-01-01/data/query/production?query=*%5B_type%20%3D%3D%20%22heroSlider%22%5D\")"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
