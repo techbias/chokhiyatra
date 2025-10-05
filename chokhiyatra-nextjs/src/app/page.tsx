@@ -1,5 +1,7 @@
 import type { Metadata } from 'next';
 import { createMetadata } from '@/lib/metadata';
+import { getPopularDestinations } from '@/lib/sanity-queries';
+import { urlFor } from '@/lib/sanity';
 import PageLayout from '@/components/PageLayout';
 import HeroSlider from '@/components/HeroSlider';
 import TourPackages from '@/components/TourPackages';
@@ -16,7 +18,8 @@ export const metadata: Metadata = createMetadata({
   keywords: ['travel', 'tourism', 'destinations', 'tour packages', 'travel agency', 'vacation planning', 'world travel', 'adventure tours'],
 });
 
-export default function HomePage() {
+export default async function HomePage() {
+  const popularDestinations = await getPopularDestinations();
   return (
     <PageLayout>
       {/* Hero Slider Section */}
@@ -172,91 +175,114 @@ export default function HomePage() {
             <div className="project-two-slider">
               <div className="project-two-active swiper-container">
                 <div className="swiper-wrapper">
-                  <div
-                    className="project-two-wrapper d-flex align-items-center tw-gap-10 bg-white tw-rounded-xl tw-py-11 tw-px-7 position-relative z-1 overflow-hidden flex-wrap row-gap-5 swiper-slide">
-                    <div className="project-two-thumb">
-                      <a href="destination-details.html"><img
-                        src="assets/images/project/project-two-thumb1.jpg"
-                        alt="thumb" /></a>
-                    </div>
-                    <div>
-                      <p className="project-two-paragraph fw-medium mb-0">Destination 01</p>
-                      <h4 className="project-two-title tw-text-10 fw-normal"><a
-                        className="hover-text-secondary"
-                        href="destination-details.html">Australia</a></h4>
-                    </div>
+                  {popularDestinations && popularDestinations.length > 0 ? popularDestinations.map((destination: any) => (
                     <div
-                      className="project-two-text bg-main-two-600 text-main-600 position-absolute">
-                      06 Listing</div>
-                  </div>
-                  <div
-                    className="project-two-wrapper d-flex align-items-center tw-gap-10 bg-white tw-rounded-xl tw-py-11 tw-px-7 position-relative z-1 overflow-hidden flex-wrap row-gap-5 swiper-slide">
-                    <div className="project-two-thumb">
-                      <a href="destination-details.html"><img
-                        src="assets/images/project/project-two-thumb2.jpg"
-                        alt="thumb" /></a>
+                      key={destination._id}
+                      className="project-two-wrapper d-flex align-items-center tw-gap-10 bg-white tw-rounded-xl tw-py-11 tw-px-7 position-relative z-1 overflow-hidden flex-wrap row-gap-5 swiper-slide">
+                      <div className="project-two-thumb">
+                        <a href="destination-details.html"><img
+                          src={destination.image ? urlFor(destination.image).width(148).height(127).url() : "assets/images/project/project-two-thumb1.jpg"}
+                          alt="thumb" /></a>
+                      </div>
+                      <div>
+                        <p className="project-two-paragraph fw-medium mb-0">Destination {destination.destinationNumber || '01'}</p>
+                        <h4 className="project-two-title tw-text-10 fw-normal"><a
+                          className="hover-text-secondary"
+                          href="destination-details.html">{destination.name}</a></h4>
+                      </div>
+                      <div
+                        className="project-two-text bg-main-two-600 text-main-600 position-absolute">
+                        {destination.listingCount || '06'} Listing</div>
                     </div>
-                    <div>
-                      <p className="project-two-paragraph fw-medium mb-0">Destination 02</p>
-                      <h4 className="project-two-title tw-text-10 fw-normal"><a
-                        className="hover-text-secondary"
-                        href="destination-details.html">Belgium</a></h4>
-                    </div>
-                    <div
-                      className="project-two-text bg-main-two-600 text-main-600 position-absolute">
-                      06 Listing</div>
-                  </div>
-                  <div
-                    className="project-two-wrapper d-flex align-items-center tw-gap-10 bg-white tw-rounded-xl tw-py-11 tw-px-7 position-relative z-1 overflow-hidden flex-wrap row-gap-5 swiper-slide">
-                    <div className="project-two-thumb">
-                      <a href="destination-details.html"><img
-                        src="assets/images/project/project-two-thumb3.jpg"
-                        alt="thumb" /></a>
-                    </div>
-                    <div>
-                      <p className="project-two-paragraph fw-medium mb-0">Destination 03</p>
-                      <h4 className="project-two-title tw-text-10 fw-normal"><a
-                        className="hover-text-secondary"
-                        href="destination-details.html">Switzerland</a></h4>
-                    </div>
-                    <div
-                      className="project-two-text bg-main-two-600 text-main-600 position-absolute">
-                      06 Listing</div>
-                  </div>
-                  <div
-                    className="project-two-wrapper d-flex align-items-center tw-gap-10 bg-white tw-rounded-xl tw-py-11 tw-px-7 position-relative z-1 overflow-hidden flex-wrap row-gap-5 swiper-slide">
-                    <div className="project-two-thumb">
-                      <a href="destination-details.html"><img
-                        src="assets/images/project/project-two-thumb4.jpg"
-                        alt="thumb" /></a>
-                    </div>
-                    <div>
-                      <p className="project-two-paragraph fw-medium mb-0">Destination 01</p>
-                      <h4 className="project-two-title tw-text-10 fw-normal"><a
-                        className="hover-text-secondary"
-                        href="destination-details.html">England</a></h4>
-                    </div>
-                    <div
-                      className="project-two-text bg-main-two-600 text-main-600 position-absolute">
-                      06 Listing</div>
-                  </div>
-                  <div
-                    className="project-two-wrapper d-flex align-items-center tw-gap-10 bg-white tw-rounded-xl tw-py-11 tw-px-7 position-relative z-1 overflow-hidden flex-wrap row-gap-5 swiper-slide">
-                    <div className="project-two-thumb">
-                      <a href="destination-details.html"><img
-                        src="assets/images/project/project-two-thumb5.jpg"
-                        alt="thumb" /></a>
-                    </div>
-                    <div>
-                      <p className="project-two-paragraph fw-medium mb-0">Destination 02</p>
-                      <h4 className="project-two-title tw-text-10 fw-normal"><a
-                        className="hover-text-secondary"
-                        href="destination-details.html">Argentina</a></h4>
-                    </div>
-                    <div
-                      className="project-two-text bg-main-two-600 text-main-600 position-absolute">
-                      06 Listing</div>
-                  </div>
+                  )) : (
+                    <>
+                      <div
+                        className="project-two-wrapper d-flex align-items-center tw-gap-10 bg-white tw-rounded-xl tw-py-11 tw-px-7 position-relative z-1 overflow-hidden flex-wrap row-gap-5 swiper-slide">
+                        <div className="project-two-thumb">
+                          <a href="destination-details.html"><img
+                            src="assets/images/project/project-two-thumb1.jpg"
+                            alt="thumb" /></a>
+                        </div>
+                        <div>
+                          <p className="project-two-paragraph fw-medium mb-0">Destination 01</p>
+                          <h4 className="project-two-title tw-text-10 fw-normal"><a
+                            className="hover-text-secondary"
+                            href="destination-details.html">Australia</a></h4>
+                        </div>
+                        <div
+                          className="project-two-text bg-main-two-600 text-main-600 position-absolute">
+                          06 Listing</div>
+                      </div>
+                      <div
+                        className="project-two-wrapper d-flex align-items-center tw-gap-10 bg-white tw-rounded-xl tw-py-11 tw-px-7 position-relative z-1 overflow-hidden flex-wrap row-gap-5 swiper-slide">
+                        <div className="project-two-thumb">
+                          <a href="destination-details.html"><img
+                            src="assets/images/project/project-two-thumb2.jpg"
+                            alt="thumb" /></a>
+                        </div>
+                        <div>
+                          <p className="project-two-paragraph fw-medium mb-0">Destination 02</p>
+                          <h4 className="project-two-title tw-text-10 fw-normal"><a
+                            className="hover-text-secondary"
+                            href="destination-details.html">Belgium</a></h4>
+                        </div>
+                        <div
+                          className="project-two-text bg-main-two-600 text-main-600 position-absolute">
+                          06 Listing</div>
+                      </div>
+                      <div
+                        className="project-two-wrapper d-flex align-items-center tw-gap-10 bg-white tw-rounded-xl tw-py-11 tw-px-7 position-relative z-1 overflow-hidden flex-wrap row-gap-5 swiper-slide">
+                        <div className="project-two-thumb">
+                          <a href="destination-details.html"><img
+                            src="assets/images/project/project-two-thumb3.jpg"
+                            alt="thumb" /></a>
+                        </div>
+                        <div>
+                          <p className="project-two-paragraph fw-medium mb-0">Destination 03</p>
+                          <h4 className="project-two-title tw-text-10 fw-normal"><a
+                            className="hover-text-secondary"
+                            href="destination-details.html">Switzerland</a></h4>
+                        </div>
+                        <div
+                          className="project-two-text bg-main-two-600 text-main-600 position-absolute">
+                          06 Listing</div>
+                      </div>
+                      <div
+                        className="project-two-wrapper d-flex align-items-center tw-gap-10 bg-white tw-rounded-xl tw-py-11 tw-px-7 position-relative z-1 overflow-hidden flex-wrap row-gap-5 swiper-slide">
+                        <div className="project-two-thumb">
+                          <a href="destination-details.html"><img
+                            src="assets/images/project/project-two-thumb4.jpg"
+                            alt="thumb" /></a>
+                        </div>
+                        <div>
+                          <p className="project-two-paragraph fw-medium mb-0">Destination 01</p>
+                          <h4 className="project-two-title tw-text-10 fw-normal"><a
+                            className="hover-text-secondary"
+                            href="destination-details.html">England</a></h4>
+                        </div>
+                        <div
+                          className="project-two-text bg-main-two-600 text-main-600 position-absolute">
+                          06 Listing</div>
+                      </div>
+                      <div
+                        className="project-two-wrapper d-flex align-items-center tw-gap-10 bg-white tw-rounded-xl tw-py-11 tw-px-7 position-relative z-1 overflow-hidden flex-wrap row-gap-5 swiper-slide">
+                        <div className="project-two-thumb">
+                          <a href="destination-details.html"><img
+                            src="assets/images/project/project-two-thumb5.jpg"
+                            alt="thumb" /></a>
+                        </div>
+                        <div>
+                          <p className="project-two-paragraph fw-medium mb-0">Destination 02</p>
+                          <h4 className="project-two-title tw-text-10 fw-normal"><a
+                            className="hover-text-secondary"
+                            href="destination-details.html">Argentina</a></h4>
+                        </div>
+                        <div
+                          className="project-two-text bg-main-two-600 text-main-600 position-absolute">
+                          06 Listing</div>
+                      </div>
+                    </>
+                  )}
                 </div>
               </div>
             </div>

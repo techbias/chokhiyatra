@@ -126,3 +126,38 @@ export async function getGalleryImages() {
   );
   return data?.images || [];
 }
+
+// Destinations (for search dropdown)
+export async function getDestinations() {
+  const data = await sanityClient.fetch(
+    `*[_type == "destination" && featured == true] | order(sortOrder asc, name asc){
+      _id,
+      name,
+      country,
+      region,
+      slug
+    }`,
+    {},
+    { next: { revalidate: 300 } }
+  );
+  return data || [];
+}
+
+// Popular Destinations (for homepage slider)
+export async function getPopularDestinations() {
+  const data = await sanityClient.fetch(
+    `*[_type == "destination" && featured == true] | order(sortOrder asc)[0...6]{
+      _id,
+      name,
+      country,
+      region,
+      image,
+      slug,
+      listingCount,
+      destinationNumber
+    }`,
+    {},
+    { next: { revalidate: 300 } }
+  );
+  return data || [];
+}

@@ -7,6 +7,7 @@ import brand from './brand';
 import flightPartner from './flightPartner';
 import testimonial from './testimonial';
 import service from './service';
+import destination from './destination';
 
 export const schemaTypes = [
   heroSlider,
@@ -18,4 +19,5 @@ export const schemaTypes = [
   flightPartner,
   testimonial,
   service,
+  destination,
 ];

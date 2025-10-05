@@ -189,7 +189,7 @@ export default function TourPackages() {
                   {/* THis is tour card  */}
                   {packages.map((pkg, index) => {
                     const imageUrl = pkg.image?.asset
-                      ? urlFor(pkg.image).url()
+                      ? urlFor(pkg.image).width(600).height(500).url()
                       : `assets/images/service/service-two-thumb${(index % 3) + 1}.jpg`;
 
                     return (
@@ -202,7 +202,7 @@ export default function TourPackages() {
                       >
                         <div className="service-two-thumb tw-mb-5">
                           <a href="package-details.html">
-                            <img className="tw-rounded-xl w-100" src={imageUrl} alt="thumb" />
+                            <img className="tw-rounded-xl w-100" src={imageUrl} alt="thumb" style={{ aspectRatio: '1/1', objectFit: 'cover' }} />
                           </a>
                         </div>
                         <div className="service-two-content tw-px-2 tw-mb-2">

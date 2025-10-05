@@ -14,7 +14,7 @@ interface HeroSliderClientProps {
 
 export default function HeroSliderClient({ slides }: HeroSliderClientProps) {
   return (
-    <section className="banner-two-area position-relative pt-40" style={{paddingBlockStart: "80px"}}>
+    <section className="banner-two-area position-relative" style={{paddingBlockStart: "80px", paddingBlockEnd: "0px"}}>
       <div className="hero-slider">
         <div className="swiper-container hero-slider-active">
           <div className="swiper-wrapper">

@@ -79,7 +79,7 @@ const Header: React.FC = () => {
               <div className="header-button">
                 <Link
                   className="primary-btn bg-white text-main-600 tw-py-3 tw-px-8 fs-15 text-uppercase fw-bold font-heading tw-gap-2 d-inline-flex align-items-center tw-rounded-4xl"
-                  href="/contact"
+                  href="https://b2b.chokhiyatra.com/" target='_blank'
                 >
                   B2B Login <i className="ph ph-arrow-up-right"></i>
                 </Link>
