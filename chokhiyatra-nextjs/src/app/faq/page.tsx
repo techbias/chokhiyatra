@@ -182,7 +182,7 @@ export default function FaqPage() {
                     className="text-main-600">Let'sCapture</span> BeautyoftheWorld</h2>
                   <div className="gallery-button d-flex justify-content-center">
                     <a className="primary-btn bg-main-two-600 text-main-600 tw-py-4 tw-px-8 fs-15 text-capitalize fw-bold font-heading tw-gap-2 d-inline-flex align-items-center tw-rounded-4xl"
-                      href="contact.html">Book Today <i className="ph ph-arrow-up-right"></i></a>
+                      href="/contact">Book Today <i className="ph ph-arrow-up-right"></i></a>
                   </div>
                   <div className="gallery-shape">
                     <img className="gallery-shape-1 position-absolute start-0 z-n1"

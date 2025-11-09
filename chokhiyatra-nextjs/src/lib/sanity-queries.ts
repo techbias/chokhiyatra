@@ -89,6 +89,7 @@ export async function getServices() {
       _id,
       title,
       description,
+      features,
       image,
       order,
       imagePosition

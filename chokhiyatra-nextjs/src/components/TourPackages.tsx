@@ -222,17 +222,15 @@ export default function TourPackages() {
                               </span>
                               <span className="text-main-600 fw-medium">{pkg.duration}</span>
                             </div>
-                            <div className="d-flex align-items-center justify-content-between flex-wrap row-gap-3">
-                              <div className="service-two-price">
-                                <h6>${pkg.price?.toFixed(2) || '0.00'}</h6>
-                                <p>/ Per Person</p>
-                              </div>
+                            <div className="d-flex align-items-center flex-wrap row-gap-3">
                               <div>
                                 <a
                                   className="font-heading tw-text-sm text-uppercase text-main-600 fw-bold hover-text-secondary"
-                                  href="package-details.html"
+                                  href={`https://wa.me/919825003639?text=${encodeURIComponent(`Hi, I'm interested in the tour package:\n\n📍 ${pkg.title}\n🌍 Location: ${pkg.location}\n⏱️ Duration: ${pkg.duration}\n\nCould you please provide me with more details?`)}`}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
                                 >
-                                  EXPLORE MORE <i className="tw-text-base ph ph-arrow-up-right"></i>
+                                  Get More Details <i className="tw-text-base ph ph-arrow-up-right"></i>
                                 </a>
                               </div>
                             </div>

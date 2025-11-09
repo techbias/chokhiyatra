@@ -371,7 +371,7 @@ export default function HomePage() {
             <div className="col-xl-12">
               <div className="catagori-button common-hover-yellow text-center tw-mt-18">
                 <a className="primary-btn bg-white text-main-600 tw-py-5 tw-px-13 fs-15 text-uppercase fw-bold font-heading tw-gap-2 d-inline-flex align-items-center tw-rounded-4xl"
-                  href="contact.html">explore more <i className="ph ph-arrow-up-right"></i></a>
+                  href="/contact">explore more <i className="ph ph-arrow-up-right"></i></a>
               </div>
             </div>
           </div>
@@ -688,7 +688,7 @@ export default function HomePage() {
                 </h2>
                 <div className="gallery-button d-flex justify-content-center">
                   <a className="primary-btn bg-main-two-600 text-main-600 tw-py-4 tw-px-8 fs-15 text-capitalize fw-bold font-heading tw-gap-2 d-inline-flex align-items-center tw-rounded-4xl"
-                    href="contact.html">Book Today <i className="ph ph-arrow-up-right"></i></a>
+                    href="/contact">Book Today <i className="ph ph-arrow-up-right"></i></a>
                 </div>
                 <div className="gallery-shape">
                   <img className="gallery-shape-1 position-absolute start-0 z-n1"

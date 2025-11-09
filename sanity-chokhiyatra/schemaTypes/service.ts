@@ -15,6 +15,13 @@ export default {
       rows: 3,
     },
     {
+      name: 'features',
+      title: 'Service Features',
+      type: 'array',
+      of: [{ type: 'string' }],
+      description: 'List of key features or highlights for this service',
+    },
+    {
       name: 'image',
       title: 'Service Image',
       type: 'image',

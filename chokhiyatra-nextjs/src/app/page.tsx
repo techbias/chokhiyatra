@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import { createMetadata } from '@/lib/metadata';
-import { getPopularDestinations } from '@/lib/sanity-queries';
+import { getPopularDestinations, getServices } from '@/lib/sanity-queries';
 import { urlFor } from '@/lib/sanity';
 import PageLayout from '@/components/PageLayout';
 import HeroSlider from '@/components/HeroSlider';
@@ -20,8 +20,9 @@ export const metadata: Metadata = createMetadata({
 
 export default async function HomePage() {
   const popularDestinations = await getPopularDestinations();
+  const services = await getServices();
   return (
-    <PageLayout>
+    <PageLayout services={services}>
       {/* Hero Slider Section */}
       <HeroSlider />
       {/* <BannerBackup/> */}
@@ -161,7 +162,7 @@ export default async function HomePage() {
               </div>
             </div>
             <div className="col-xl-3 col-lg-4">
-              <div className="counter-button project-two-button d-flex justify-content-end flex-wrap"
+              <div className="counter-button project-two-button d-flex flex-wrap"
                 data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
                 <a className="primary-btn bg-main-two-600 text-main-600 tw-py-4 tw-px-8 fs-15 text-uppercase fw-bold font-heading tw-gap-2 d-inline-flex align-items-center tw-rounded-4xl"
                   href="destination-details.html">explore more <i
@@ -175,7 +176,7 @@ export default async function HomePage() {
             <div className="project-two-slider">
               <div className="project-two-active swiper-container">
                 <div className="swiper-wrapper">
-                  {popularDestinations && popularDestinations.length > 0 ? popularDestinations.map((destination: any) => (
+                  {popularDestinations && popularDestinations.length > 0 ? popularDestinations.map((destination: any, idx: number) => (
                     <div
                       key={destination._id}
                       className="project-two-wrapper d-flex align-items-center tw-gap-10 bg-white tw-rounded-xl tw-py-11 tw-px-7 position-relative z-1 overflow-hidden flex-wrap row-gap-5 swiper-slide">
@@ -185,7 +186,7 @@ export default async function HomePage() {
                           alt="thumb" /></a>
                       </div>
                       <div>
-                        <p className="project-two-paragraph fw-medium mb-0">Destination {destination.destinationNumber || '01'}</p>
+                        <p className="project-two-paragraph fw-medium mb-0">Destination 0{idx+1 || '01'}</p>
                         <h4 className="project-two-title tw-text-10 fw-normal"><a
                           className="hover-text-secondary"
                           href="destination-details.html">{destination.name}</a></h4>
@@ -397,7 +398,7 @@ export default async function HomePage() {
             <div className="col-xl-12">
               <div className="catagori-button common-hover-yellow text-center tw-mt-18">
                 <a className="primary-btn bg-white text-main-600 tw-py-5 tw-px-13 fs-15 text-uppercase fw-bold font-heading tw-gap-2 d-inline-flex align-items-center tw-rounded-4xl"
-                  href="contact.html">explore more <i className="ph ph-arrow-up-right"></i></a>
+                  href="/contact">explore more <i className="ph ph-arrow-up-right"></i></a>
               </div>
             </div>
           </div>
@@ -504,80 +505,122 @@ export default async function HomePage() {
           </div>
           <div className="row">
             <div className="col-xl-12">
-              {/* Service 1 - Image Left */}
-              <div className="row blog-panel tw-mb-8 tw-mt-8">
-                <div className="col-xl-12">
-                  <div
-                    className="blog-two-wrapper tw-rounded-xl d-flex align-items-center justify-content-between tw-p-2">
-                    <div className="blog-two-thumb order-1">
-                      <img src="assets/images/blog/blog-two-thumb1.png" alt="service" />
-                    </div>
-                    <div className="blog-two-content order-2">
-                      <h4 className="blog-two-title tw-text-9 text-capitalize fw-normal tw-mb-6 tw-ms-4">
-                        Flight Booking & Reservations
-                      </h4>
-                      <p className="tw-text-lg tw-ms-4 tw-mb-6">
-                        Book domestic and international flights with ease. We offer competitive rates and seamless booking experience for all major airlines.
-                      </p>
-                      <div className="blog-two-button tw-ms-4">
-                        <a className="text-black fw-medium d-inline-flex tw-gap-4" href="/contact">
-                          Learn More <span><img src="assets/images/icon/blog-two-arrow.svg" alt="arrow" /></span>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              {services && services.length > 0 ? (
+                services.map((service: any, index: number) => {
+                  const imageUrl = service.image ? urlFor(service.image).width(800).height(600).url() : `assets/images/blog/blog-two-thumb${(index % 3) + 1}.png`;
+                  const isImageLeft = service.imagePosition === 'left';
 
-              {/* Service 2 - Image Right */}
-              <div className="row blog-panel tw-mb-8 tw-mt-8">
-                <div className="col-xl-12">
-                  <div
-                    className="blog-two-wrapper tw-rounded-xl d-flex align-items-center justify-content-between tw-p-2">
-                    <div className="blog-two-content order-1">
-                      <h4 className="blog-two-title tw-text-9 text-capitalize fw-normal tw-mb-6 tw-ms-4">
-                        Hotel & Accommodation
-                      </h4>
-                      <p className="tw-text-lg tw-ms-4 tw-mb-6">
-                        Find the perfect stay for your journey. From luxury resorts to budget-friendly hotels, we have options for every traveler.
-                      </p>
-                      <div className="blog-two-button tw-ms-4">
-                        <a className="text-black fw-medium d-inline-flex tw-gap-4" href="/contact">
-                          Learn More <span><img src="assets/images/icon/blog-two-arrow.svg" alt="arrow" /></span>
-                        </a>
+                  return (
+                    <div key={service._id} className="row blog-panel tw-mb-8 tw-mt-8">
+                      <div className="col-xl-12">
+                        <div className="blog-two-wrapper tw-rounded-xl d-flex align-items-center justify-content-center tw-p-2">
+                          <div className={`blog-two-thumb ${isImageLeft ? 'order-1' : 'order-2'}`} style={{width: "40%"}} >
+                            <img src={imageUrl} alt={service.title} />
+                          </div>
+                          <div className={`blog-two-content ${isImageLeft ? 'order-2' : 'order-1'}`} style={{width: "50%"}} >
+                            <h4 className="blog-two-title tw-text-9 text-capitalize fw-normal tw-mb-6 tw-ms-4">
+                              {service.title}
+                            </h4>
+                            <p className="tw-text-lg tw-ms-4 tw-mb-6">
+                              {service.description}
+                            </p>
+                            {service.features && service.features.length > 0 && (
+                              <ul className="tw-ms-4 tw-mb-6 tw-list-none tw-space-y-2">
+                                {service.features.map((feature: string, idx: number) => (
+                                  <li key={idx} className="tw-flex tw-items-start tw-gap-2">
+                                    <span className="tw-text-main-600 tw-mt-1">✔&nbsp;</span>
+                                    <span className="tw-text-base">{feature}</span>
+                                  </li>
+                                ))}
+                              </ul>
+                            )}
+                            <div className="blog-two-button tw-ms-4">
+                              <a className="text-black fw-medium d-inline-flex tw-gap-4" href="/contact">
+                                Learn More <span><img src="assets/images/icon/blog-two-arrow.svg" alt="arrow" /></span>
+                              </a>
+                            </div>
+                          </div>
+                        </div>
                       </div>
                     </div>
-                    <div className="blog-two-thumb order-2">
-                      <img src="assets/images/blog/blog-two-thumb2.png" alt="service" />
+                  );
+                })
+              ) : (
+                <>
+                  {/* Fallback content */}
+                  <div className="row blog-panel tw-mb-8 tw-mt-8">
+                    <div className="col-xl-12">
+                      <div
+                        className="blog-two-wrapper tw-rounded-xl d-flex align-items-center justify-content-between tw-p-2">
+                        <div className="blog-two-thumb order-1">
+                          <img src="assets/images/blog/blog-two-thumb1.png" alt="service" />
+                        </div>
+                        <div className="blog-two-content order-2">
+                          <h4 className="blog-two-title tw-text-9 text-capitalize fw-normal tw-mb-6 tw-ms-4">
+                            Flight Booking & Reservations
+                          </h4>
+                          <p className="tw-text-lg tw-ms-4 tw-mb-6">
+                            Book domestic and international flights with ease. We offer competitive rates and seamless booking experience for all major airlines.
+                          </p>
+                          <div className="blog-two-button tw-ms-4">
+                            <a className="text-black fw-medium d-inline-flex tw-gap-4" href="/contact">
+                              Learn More <span><img src="assets/images/icon/blog-two-arrow.svg" alt="arrow" /></span>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
-                </div>
-              </div>
 
-              {/* Service 3 - Image Left */}
-              <div className="row blog-panel tw-mb-8 tw-mt-8">
-                <div className="col-xl-12">
-                  <div
-                    className="blog-two-wrapper tw-rounded-xl d-flex align-items-center justify-content-between tw-p-2">
-                    <div className="blog-two-thumb order-1">
-                      <img src="assets/images/blog/blog-two-thumb3.png" alt="service" />
-                    </div>
-                    <div className="blog-two-content order-2">
-                      <h4 className="blog-two-title tw-text-9 text-capitalize fw-normal tw-mb-6 tw-ms-4">
-                        Tour Packages & Experiences
-                      </h4>
-                      <p className="tw-text-lg tw-ms-4 tw-mb-6">
-                        Explore curated tour packages for destinations worldwide. Enjoy hassle-free travel with our expertly planned itineraries.
-                      </p>
-                      <div className="blog-two-button tw-ms-4">
-                        <a className="text-black fw-medium d-inline-flex tw-gap-4" href="/contact">
-                          Learn More <span><img src="assets/images/icon/blog-two-arrow.svg" alt="arrow" /></span>
-                        </a>
+                  <div className="row blog-panel tw-mb-8 tw-mt-8">
+                    <div className="col-xl-12">
+                      <div
+                        className="blog-two-wrapper tw-rounded-xl d-flex align-items-center justify-content-between tw-p-2">
+                        <div className="blog-two-content order-1">
+                          <h4 className="blog-two-title tw-text-9 text-capitalize fw-normal tw-mb-6 tw-ms-4">
+                            Hotel & Accommodation
+                          </h4>
+                          <p className="tw-text-lg tw-ms-4 tw-mb-6">
+                            Find the perfect stay for your journey. From luxury resorts to budget-friendly hotels, we have options for every traveler.
+                          </p>
+                          <div className="blog-two-button tw-ms-4">
+                            <a className="text-black fw-medium d-inline-flex tw-gap-4" href="/contact">
+                              Learn More <span><img src="assets/images/icon/blog-two-arrow.svg" alt="arrow" /></span>
+                            </a>
+                          </div>
+                        </div>
+                        <div className="blog-two-thumb order-2">
+                          <img src="assets/images/blog/blog-two-thumb2.png" alt="service" />
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
-              </div>
+
+                  <div className="row blog-panel tw-mb-8 tw-mt-8">
+                    <div className="col-xl-12">
+                      <div
+                        className="blog-two-wrapper tw-rounded-xl d-flex align-items-center justify-content-between tw-p-2">
+                        <div className="blog-two-thumb order-1">
+                          <img src="assets/images/blog/blog-two-thumb3.png" alt="service" />
+                        </div>
+                        <div className="blog-two-content order-2">
+                          <h4 className="blog-two-title tw-text-9 text-capitalize fw-normal tw-mb-6 tw-ms-4">
+                            Tour Packages & Experiences
+                          </h4>
+                          <p className="tw-text-lg tw-ms-4 tw-mb-6">
+                            Explore curated tour packages for destinations worldwide. Enjoy hassle-free travel with our expertly planned itineraries.
+                          </p>
+                          <div className="blog-two-button tw-ms-4">
+                            <a className="text-black fw-medium d-inline-flex tw-gap-4" href="/contact">
+                              Learn More <span><img src="assets/images/icon/blog-two-arrow.svg" alt="arrow" /></span>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </>
+              )}
             </div>
           </div>
         </div>
@@ -596,7 +639,7 @@ export default async function HomePage() {
                 </h2>
                 <div className="gallery-button d-flex justify-content-center">
                   <a className="primary-btn bg-main-two-600 text-main-600 tw-py-4 tw-px-8 fs-15 text-capitalize fw-bold font-heading tw-gap-2 d-inline-flex align-items-center tw-rounded-4xl"
-                    href="contact.html">Book Today <i className="ph ph-arrow-up-right"></i></a>
+                    href="/contact">Book Today <i className="ph ph-arrow-up-right"></i></a>
                 </div>
                 <div className="gallery-shape">
                   <img className="gallery-shape-1 position-absolute start-0 z-n1"

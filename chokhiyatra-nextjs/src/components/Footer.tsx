@@ -4,7 +4,20 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 
-const Footer: React.FC = () => {
+interface Service {
+  _id: string;
+  title: string;
+  description: string;
+  image: any;
+  order: number;
+  imagePosition: string;
+}
+
+interface FooterProps {
+  services?: Service[];
+}
+
+const Footer: React.FC<FooterProps> = ({ services = [] }) => {
   const [email, setEmail] = useState('');
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
@@ -163,31 +176,43 @@ const Footer: React.FC = () => {
                 <div className="footer-col-four" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
                   <h4 className="cursor-big tw-text-2xl tw-mb-8">Service</h4>
                   <ul className="d-flex flex-column tw-gap-4">
-                    <li>
-                      <Link href="#" className="footer-link hover-underline">
-                        Historical & Cultural Tours
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="#" className="footer-link hover-underline">
-                        Adventure & Outdoor Tours
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="#" className="footer-link hover-underline">
-                        Wildlife & Safari Tours
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="#" className="footer-link hover-underline">
-                        Luxury & Relaxation Tours
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="#" className="footer-link hover-underline">
-                        Photography & Scenic Tours
-                      </Link>
-                    </li>
+                    {services && services.length > 0 ? (
+                      services.slice(0, 5).map((service) => (
+                        <li key={service._id}>
+                          <Link href="/contact" className="footer-link hover-underline">
+                            {service.title}
+                          </Link>
+                        </li>
+                      ))
+                    ) : (
+                      <>
+                        <li>
+                          <Link href="#" className="footer-link hover-underline">
+                            Historical & Cultural Tours
+                          </Link>
+                        </li>
+                        <li>
+                          <Link href="#" className="footer-link hover-underline">
+                            Adventure & Outdoor Tours
+                          </Link>
+                        </li>
+                        <li>
+                          <Link href="#" className="footer-link hover-underline">
+                            Wildlife & Safari Tours
+                          </Link>
+                        </li>
+                        <li>
+                          <Link href="#" className="footer-link hover-underline">
+                            Luxury & Relaxation Tours
+                          </Link>
+                        </li>
+                        <li>
+                          <Link href="#" className="footer-link hover-underline">
+                            Photography & Scenic Tours
+                          </Link>
+                        </li>
+                      </>
+                    )}
                   </ul>
                 </div>
               </div>
@@ -223,10 +248,10 @@ const Footer: React.FC = () => {
                   </li>
                   <li>
                     <Link
-                      href="/service"
+                      href="/web-checkin"
                       className="text-main-600 text-uppercase fw-semibold tw-text-sm hover-underline hover-text-secondary"
                     >
-                      Services
+                      Web Check-in
                     </Link>
                   </li>
                   <li>
@@ -235,14 +260,6 @@ const Footer: React.FC = () => {
                       className="text-main-600 text-uppercase fw-semibold tw-text-sm hover-underline hover-text-secondary"
                     >
                       faq
-                    </Link>
-                  </li>
-                  <li className="mb-0">
-                    <Link
-                      href="/blog"
-                      className="text-main-600 text-uppercase fw-semibold tw-text-sm hover-underline hover-text-secondary"
-                    >
-                      blog
                     </Link>
                   </li>
                 </ul>

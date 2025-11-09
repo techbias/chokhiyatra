@@ -448,8 +448,29 @@ document.addEventListener("DOMContentLoaded", function () {
 	pr.add("(min-width: 991px)", () => {
 		let tl = gsap.timeline();
 		let projectpanels = document.querySelectorAll('.blog-panel')
+		const totalPanels = projectpanels.length;
+
 		projectpanels.forEach((section, index) => {
+			// Calculate scale based on index - first card smallest, each subsequent card larger
+			// Reverse the index calculation: (totalPanels - 1 - index) gives us reversed index
+			const reverseIndex = totalPanels - 1 - index;
+			const targetScale = 1 - (reverseIndex * 0.05); // First card smallest (e.g., 0.85), last card largest (1.0)
+			const targetOpacity = 1 - (reverseIndex * 0.1); // First card most transparent, last card most opaque
+			const targetY = -(reverseIndex * 80); // Move cards up to create visible stacked effect (100px per card)
+
+			// Set initial scale and transform origin
+			gsap.set(section, {
+				scale: 1,
+				opacity: 1,
+				y: 0,
+				transformOrigin: "bottom center"
+			});
+
 			tl.to(section, {
+				scale: Math.max(targetScale, 0.8), // minimum scale of 0.8
+				opacity: Math.max(targetOpacity, 0.6), // minimum opacity of 0.6
+				y: targetY, // Add vertical offset for stacked file effect
+				transformOrigin: "bottom center",
 				scrollTrigger: {
 					trigger: section,
 					pin: section,
