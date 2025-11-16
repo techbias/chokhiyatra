@@ -120,6 +120,19 @@
   max-width: 100% !important;
 }
 
+/* Mobile: Stack all fields in single column */
+@media screen and (max-width: 767px) {
+  .checkout-bg form > div {
+    flex-direction: column !important;
+  }
+
+  .search-field-bg {
+    flex: 1 1 100% !important;
+    min-width: 100% !important;
+    width: 100% !important;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .checkout-wrapper {
     max-width: 100% !important;
