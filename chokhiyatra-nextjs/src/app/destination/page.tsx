@@ -424,7 +424,7 @@ export default function DestinationPage() {
         </section>
 
         {/* Instagram Section */}
-        <section className="instagram-area">
+        {/* <section className="instagram-area">
           <div className="container">
             <div className="row">
               <div className="col-xl-12">
@@ -496,7 +496,7 @@ export default function DestinationPage() {
               </div>
             </div>
           </div>
-        </section>
+        </section> */}
     </PageLayout>
   );
 }

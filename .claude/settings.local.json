@@ -16,7 +16,9 @@
       "Bash(npm create:*)",
       "Bash(node:*)",
       "Bash(curl -s \"https://i8rl0x39.api.sanity.io/v2024-01-01/data/query/production?query=*%5B_type%20%3D%3D%20%22heroSlider%22%5D\")",
-      "Bash(npm run build:*)"
+      "Bash(npm run build:*)",
+      "Bash(touch:*)",
+      "Bash(npm run dev:*)"
     ],
     "deny": [],
     "ask": []

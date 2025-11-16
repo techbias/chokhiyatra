@@ -85,8 +85,6 @@ export default function WebCheckinPage() {
                       target="_blank"
                       rel="noopener noreferrer"
                       className="airline-card d-flex flex-column align-items-center justify-content-center bg-white tw-p-6 tw-rounded-xl text-decoration-none position-relative overflow-hidden"
-                      data-aos="fade-up"
-                      data-aos-duration="1000"
                     >
                       <div className="airline-logo tw-mb-3 d-flex align-items-center justify-content-center" style={{ height: '90px', width: '100%' }}>
                         <img

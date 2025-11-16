@@ -11,6 +11,7 @@ import HotelPartners from '@/components/HotelPartners';
 import FlightPartners from '@/components/FlightPartners';
 import Testimonials from '@/components/Testimonials';
 import BannerBackup from '@/components/backup/BannerBackup';
+import SearchForm from '@/components/SearchForm';
 
 export const metadata: Metadata = createMetadata({
   title: 'Home - Explore the World with ChokhiYatra',
@@ -28,88 +29,7 @@ export default async function HomePage() {
       {/* <BannerBackup/> */}
 
       {/* Search/Checkout Form Section */}
-      <div className="checkout-two-area">
-        <div className="checkout-area position-relative z-3">
-          <div className="container">
-            <div className="checkout-bg bg-white tw-pt-11 tw-px-14 tw-pb-11 tw-rounded-md">
-              <div className="row">
-                <div className="col-xl-12">
-                  <div className="checkout-main-wrapper">
-                    <div className="checkout-wrapper d-flex flex-column">
-                      <label
-                        className="tw-text-sm fw-normal font-body d-flex align-content-center tw-gap-4 tw-mb-2"><span><img
-                          src="assets/images/icon/checkout-icon1.svg"
-                          alt="icon" /></span> Destination</label>
-                      <div className="nice-select"><span className="current">Your city or
-                        Region</span>
-                        <ul className="list">
-                          <li className="option">Your city or Region</li>
-                          <li className="option">Berlin Germany</li>
-                          <li className="option">Paris France</li>
-                          <li className="option">Tokiyo Japan</li>
-                        </ul>
-                      </div>
-                    </div>
-                    <div className="checkout-wrapper d-flex flex-column">
-                      <label
-                        className="tw-text-sm fw-normal font-body d-flex align-content-center tw-gap-4 tw-mb-2"><span><img
-                          src="assets/images/icon/checkout-icon2.svg"
-                          alt="icon" /></span> All Activity</label>
-                      <div className="nice-select"><span className="current">Choose Activity</span>
-                        <ul className="list">
-                          <li className="option">Choose Activity</li>
-                          <li className="option">Berlin Germany</li>
-                          <li className="option">Paris France</li>
-                          <li className="option">Tokiyo Japan</li>
-                        </ul>
-                      </div>
-                    </div>
-                    <div className="checkout-wrapper d-flex flex-column">
-                      <label
-                        className="tw-text-sm fw-normal font-body d-flex align-content-center tw-gap-4 tw-mb-2"><span><img
-                          src="assets/images/icon/checkout-icon3.svg"
-                          alt="icon" /></span> Departure Date</label>
-                      <div className="nice-select"><span className="current">Date Form</span>
-                        <ul className="list">
-                          <li className="option">Date Form</li>
-                          <li className="option">Berlin Germany</li>
-                          <li className="option">Paris France</li>
-                          <li className="option">Tokiyo Japan</li>
-                        </ul>
-                      </div>
-                    </div>
-                    <div className="checkout-wrapper d-flex flex-column">
-                      <label
-                        className="tw-text-sm fw-normal font-body d-flex align-content-center tw-gap-4 tw-mb-2"><span><img
-                          src="assets/images/icon/checkout-icon4.svg"
-                          alt="icon" /></span> Guest</label>
-                      <div className="nice-select"><span className="current">Your Guest</span>
-                        <ul className="list">
-                          <li className="option">Your Guest</li>
-                          <li className="option">1</li>
-                          <li className="option">2</li>
-                          <li className="option">3</li>
-                          <li className="option">4</li>
-                          <li className="option">5</li>
-                          <li className="option">6</li>
-                        </ul>
-                      </div>
-                    </div>
-                    <div className="checkout-wrapper">
-                      <div className="checkout-button common-hover-yellow">
-                        <button
-                          className="primary-btn bg-main-600 text-white tw-py-4 tw-px-10 fs-15 text-capitalize fw-bold font-heading tw-gap-2 d-inline-flex align-items-center tw-rounded-4xl">Search
-                          <span><img src="assets/images/icon/search-btn.svg"
-                            alt="search" /></span></button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <SearchForm destinations={popularDestinations || []} />
 
       {/* Advance Gallery Section */}
       <AdvanceGallery />
@@ -193,7 +113,7 @@ export default async function HomePage() {
                       </div>
                       <div
                         className="project-two-text bg-main-two-600 text-main-600 position-absolute">
-                        {destination.listingCount || '06'} Listing</div>
+                        {`0${idx + 1}` || '06'} Listing</div>
                     </div>
                   )) : (
                     <>
@@ -657,7 +577,7 @@ export default async function HomePage() {
       </section>
 
       {/* Instagram Section */}
-      <section className="instagram-area">
+      {/* <section className="instagram-area">
         <div className="container">
           <div className="row">
             <div className="col-xl-12">
@@ -748,7 +668,7 @@ export default async function HomePage() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
     </PageLayout>
   );
 }

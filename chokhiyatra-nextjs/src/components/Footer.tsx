@@ -1,7 +1,6 @@
 'use client';
 
 import React, { useState } from 'react';
-import Link from 'next/link';
 import Image from 'next/image';
 
 interface Service {
@@ -19,12 +18,33 @@ interface FooterProps {
 
 const Footer: React.FC<FooterProps> = ({ services = [] }) => {
   const [email, setEmail] = useState('');
+  const [loading, setLoading] = useState(false);
+  const [success, setSuccess] = useState(false);
+  const [error, setError] = useState('');
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    // Handle newsletter subscription
-    console.log('Newsletter subscription:', email);
-    setEmail('');
+    setLoading(true);
+    setError('');
+    setSuccess(false);
+
+    try {
+      const response = await fetch('/api/newsletter', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email }),
+      });
+
+      if (!response.ok) throw new Error('Failed to subscribe');
+
+      setSuccess(true);
+      setEmail('');
+      setTimeout(() => setSuccess(false), 5000);
+    } catch (err: any) {
+      setError(err.message || 'Something went wrong');
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -51,7 +71,7 @@ const Footer: React.FC<FooterProps> = ({ services = [] }) => {
                   </a>
                 </div>
                 <div className="tw-hover-btn-wrapper d-inline-block">
-                  <Link className="tw-btn-circle tw-hover-btn-item tw-hover-btn" href="/contact">
+                  <a className="tw-btn-circle tw-hover-btn-item tw-hover-btn" href="/contact">
                     <span className="d-flex flex-column justify-content-center">
                       <span className="tw-btn-circle-icon">
                         <Image
@@ -64,7 +84,7 @@ const Footer: React.FC<FooterProps> = ({ services = [] }) => {
                       <span className="text-white fw-bold">Connect Now</span>
                     </span>
                     <i className="tw-btn-circle-dot"></i>
-                  </Link>
+                  </a>
                 </div>
               </div>
             </div>
@@ -81,17 +101,31 @@ const Footer: React.FC<FooterProps> = ({ services = [] }) => {
                     className="form-control footer-form-input tw-ps-9 tw-pe-13 tw-h-12 focus-tw-placeholder-text-hidden tw-placeholder-transition-2 tw-mb-4 focus-border-main-600 tw-placeholder-text-neutral-300 focus-tw-placeholder-text-hidden"
                     placeholder="Email..."
                     required
+                    disabled={loading}
                   />
                   <button
                     type="submit"
+                    disabled={loading}
                     className="footer-form-email position-absolute top-50 tw--translate-y-50 start-0 tw-ps-4 tw-text-sm"
                   >
                     <i className="ph ph-envelope"></i>
                   </button>
                 </form>
-                <p className="text-main-600 fw-medium tw-mb-4">
-                  By subscribing, you&apos;re accept Privacy Policy
-                </p>
+                {success && (
+                  <p className="text-success fw-medium tw-mb-4">
+                    Successfully subscribed! Check your email.
+                  </p>
+                )}
+                {error && (
+                  <p className="text-danger fw-medium tw-mb-4">
+                    {error}
+                  </p>
+                )}
+                {!success && !error && (
+                  <p className="text-main-600 fw-medium tw-mb-4">
+                    By subscribing, you&apos;re accept Privacy Policy
+                  </p>
+                )}
                 <ul className="d-flex justify-content-center tw-gap-2">
                   <li>
                     <a
@@ -145,29 +179,29 @@ const Footer: React.FC<FooterProps> = ({ services = [] }) => {
                   <h4 className="cursor-big tw-text-2xl tw-mb-8">My account</h4>
                   <ul className="d-flex flex-column tw-gap-4">
                     <li>
-                      <Link href="/contact" className="footer-link hover-underline">
+                      <a href="/contact" className="footer-link hover-underline">
                         Contact Us
-                      </Link>
+                      </a>
                     </li>
                     <li>
-                      <Link href="/faq" className="footer-link hover-underline">
+                      <a href="/faq" className="footer-link hover-underline">
                         FAQ Page
-                      </Link>
+                      </a>
                     </li>
                     <li>
-                      <Link href="/contact" className="footer-link hover-underline">
+                      <a href="/contact" className="footer-link hover-underline">
                         Get In Touch
-                      </Link>
+                      </a>
                     </li>
                     <li>
-                      <Link href="#" className="footer-link hover-underline">
+                      <a href="#" className="footer-link hover-underline">
                         Global Network
-                      </Link>
+                      </a>
                     </li>
                     <li className="mb-0">
-                      <Link href="#" className="footer-link hover-underline">
+                      <a href="#" className="footer-link hover-underline">
                         Suport 24/7
-                      </Link>
+                      </a>
                     </li>
                   </ul>
                 </div>
@@ -179,37 +213,37 @@ const Footer: React.FC<FooterProps> = ({ services = [] }) => {
                     {services && services.length > 0 ? (
                       services.slice(0, 5).map((service) => (
                         <li key={service._id}>
-                          <Link href="/contact" className="footer-link hover-underline">
+                          <a href="/contact" className="footer-link hover-underline">
                             {service.title}
-                          </Link>
+                          </a>
                         </li>
                       ))
                     ) : (
                       <>
                         <li>
-                          <Link href="#" className="footer-link hover-underline">
+                          <a href="#" className="footer-link hover-underline">
                             Historical & Cultural Tours
-                          </Link>
+                          </a>
                         </li>
                         <li>
-                          <Link href="#" className="footer-link hover-underline">
+                          <a href="#" className="footer-link hover-underline">
                             Adventure & Outdoor Tours
-                          </Link>
+                          </a>
                         </li>
                         <li>
-                          <Link href="#" className="footer-link hover-underline">
+                          <a href="#" className="footer-link hover-underline">
                             Wildlife & Safari Tours
-                          </Link>
+                          </a>
                         </li>
                         <li>
-                          <Link href="#" className="footer-link hover-underline">
+                          <a href="#" className="footer-link hover-underline">
                             Luxury & Relaxation Tours
-                          </Link>
+                          </a>
                         </li>
                         <li>
-                          <Link href="#" className="footer-link hover-underline">
+                          <a href="#" className="footer-link hover-underline">
                             Photography & Scenic Tours
-                          </Link>
+                          </a>
                         </li>
                       </>
                     )}
@@ -231,36 +265,36 @@ const Footer: React.FC<FooterProps> = ({ services = [] }) => {
               <div className="">
                 <ul className="footer-copyright-social d-flex tw-gap-16">
                   <li>
-                    <Link
+                    <a
                       href="/"
                       className="text-main-600 text-uppercase fw-semibold tw-text-sm hover-underline hover-text-secondary"
                     >
                       Home
-                    </Link>
+                    </a>
                   </li>
                   <li>
-                    <Link
+                    <a
                       href="/about"
                       className="text-main-600 text-uppercase fw-semibold tw-text-sm hover-underline hover-text-secondary"
                     >
                       About
-                    </Link>
+                    </a>
                   </li>
                   <li>
-                    <Link
+                    <a
                       href="/web-checkin"
                       className="text-main-600 text-uppercase fw-semibold tw-text-sm hover-underline hover-text-secondary"
                     >
                       Web Check-in
-                    </Link>
+                    </a>
                   </li>
                   <li>
-                    <Link
+                    <a
                       href="/faq"
                       className="text-main-600 text-uppercase fw-semibold tw-text-sm hover-underline hover-text-secondary"
                     >
                       faq
-                    </Link>
+                    </a>
                   </li>
                 </ul>
               </div>

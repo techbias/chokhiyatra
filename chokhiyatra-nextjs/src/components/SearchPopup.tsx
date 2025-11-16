@@ -1,7 +1,6 @@
 'use client';
 
 import Image from 'next/image';
-import Link from 'next/link';
 
 export default function SearchPopup() {
   return (
@@ -12,14 +11,14 @@ export default function SearchPopup() {
             <div className="search_wrapper">
               <div className="search_top d-flex justify-content-between align-items-center">
                 <div className="search_logo">
-                  <Link href="/">
+                  <a href="/">
                     <Image
                       src="/assets/images/logo/logo.png"
                       alt="Logo"
                       width={150}
                       height={50}
                     />
-                  </Link>
+                  </a>
                 </div>
                 <div className="search_close">
                   <button type="button" className="search_close_btn">
