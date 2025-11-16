@@ -1,0 +1,235 @@
+/* Responsive Fixes for ChokhiYatra */
+
+/* ChokhiYatra Intro Section - Reduced Font Sizes */
+.ChokhiYatra-title {
+    font-size: 120px !important;
+}
+
+@media screen and (max-width: 991px) {
+    .ChokhiYatra-title {
+        font-size: 90px !important;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .ChokhiYatra-title {
+        font-size: 70px !important;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .ChokhiYatra-title {
+        font-size: 50px !important;
+    }
+}
+
+@media screen and (max-width: 424px) {
+    .ChokhiYatra-title {
+        font-size: 42px !important;
+    }
+}
+
+.ChokhiYatra-text {
+    font-size: 40px !important;
+    line-height: 1.3 !important;
+}
+
+@media screen and (max-width: 1399px) {
+    .ChokhiYatra-text {
+        font-size: 32px !important;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .ChokhiYatra-text {
+        font-size: 26px !important;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .ChokhiYatra-text {
+        font-size: 22px !important;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .ChokhiYatra-text {
+        font-size: 18px !important;
+    }
+}
+
+/* Gallery Section Text - Smaller Font Sizes */
+.gallery-section-text {
+    font-size: 28px !important;
+    line-height: 1.4 !important;
+    letter-spacing: 0.01em;
+}
+
+@media screen and (max-width: 1399px) {
+    .gallery-section-text {
+        font-size: 24px !important;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .gallery-section-text {
+        font-size: 20px !important;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .gallery-section-text {
+        font-size: 18px !important;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .gallery-section-text {
+        font-size: 16px !important;
+    }
+}
+
+/* Search Form Responsive Styles */
+.checkout-bg form > div {
+  gap: 0.75rem;
+}
+
+.search-field-bg {
+  background-color: #f8f9fa;
+  border-radius: 12px;
+  padding: 1rem 1.25rem;
+}
+
+@media screen and (max-width: 768px) {
+  .checkout-wrapper {
+    max-width: 100% !important;
+    border-right: none !important;
+    margin-bottom: 1rem;
+  }
+
+  .checkout-bg {
+    padding-inline-start: 1rem !important;
+    padding-inline-end: 1rem !important;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .checkout-two-area {
+    margin-top: 2rem;
+  }
+
+  .checkout-area {
+    margin-top: 0 !important;
+  }
+}
+
+/* Service Cards Responsive */
+@media screen and (max-width: 768px) {
+  .blog-two-wrapper {
+    flex-direction: column !important;
+  }
+
+  .blog-two-thumb,
+  .blog-two-content {
+    width: 100% !important;
+  }
+
+  .blog-two-thumb img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* Popular Destinations Responsive */
+.project-two-wrapper {
+  min-width: 280px;
+}
+
+@media screen and (max-width: 576px) {
+  .project-two-wrapper {
+    min-width: 250px;
+    padding: 1.5rem 1rem !important;
+  }
+}
+
+/* Popular Destinations Slider - Removed extra padding (now handled by container px-3) */
+
+/* Section Padding Responsive */
+@media screen and (max-width: 768px) {
+  .py-140 {
+    padding-top: 4rem !important;
+    padding-bottom: 4rem !important;
+  }
+
+  section.py-140 {
+    padding-top: 4rem !important;
+    padding-bottom: 4rem !important;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .py-140 {
+    padding-top: 3rem !important;
+    padding-bottom: 3rem !important;
+  }
+
+  section.py-140 {
+    padding-top: 3rem !important;
+    padding-bottom: 3rem !important;
+  }
+}
+
+/* Category Widgets Responsive */
+@media screen and (max-width: 991px) {
+  .catagori-widgets {
+    flex-direction: column !important;
+    gap: 1rem;
+  }
+
+  .catagori-item {
+    width: 100% !important;
+  }
+}
+
+/* Gallery Section Responsive */
+@media screen and (max-width: 768px) {
+  .gallery-two-wrapper {
+    min-width: 250px !important;
+  }
+}
+
+/* Fix for container padding on mobile */
+@media screen and (max-width: 576px) {
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+/* Button Responsive */
+@media screen and (max-width: 576px) {
+  .primary-btn {
+    padding: 0.75rem 1.5rem !important;
+    font-size: 14px !important;
+  }
+}
+
+/* Plane shape - now hidden via Bootstrap d-none d-md-block classes */
+
+/* Project background images and overlays - now hidden via Bootstrap d-none d-md-block classes */
+
+/* Hide any pseudo-element overlays on project section in mobile */
+@media screen and (max-width: 767px) {
+  .project-bg::before,
+  .project-bg::after,
+  .project-bg-shape::before,
+  .project-bg-shape::after {
+    display: none !important;
+  }
+
+  /* Also hide any overlay on the parent section */
+  section.py-140::before,
+  section.py-140::after {
+    opacity: 0 !important;
+  }
+}

@@ -66,13 +66,13 @@ export default function SearchForm({ destinations }: SearchFormProps) {
     <div className="checkout-two-area">
       <div className="checkout-area position-relative z-3">
         <div className="container">
-          <div className="checkout-bg bg-white tw-pt-11 tw-px-14 tw-pb-11 tw-rounded-md">
-            <div className="row">
-              <div className="col-xl-12">
-                <form onSubmit={handleSearch} className="checkout-main-wrapper">
+          <div className="checkout-bg bg-white tw-pt-11 tw-pb-11 tw-rounded-md px-3 px-md-5 px-lg-14">
+            <div>
+              <div>
+                <form onSubmit={handleSearch}>
                   {/* First Row: Destination, Activity, Date */}
-                  <div className="row tw-mb-4">
-                    <div className="col-xl-4 col-md-4">
+                  <div className="d-flex flex-wrap tw-mb-4">
+                    <div className="search-field-bg" style={{ flex: '1 1 calc(33.333% - 1rem)', minWidth: '250px' }}>
                       <div className="checkout-wrapper d-flex flex-column">
                         <label className="tw-text-sm fw-normal font-body d-flex align-content-center tw-gap-4 tw-mb-2">
                           <span><img src="assets/images/icon/checkout-icon1.svg" alt="icon" /></span> Destination
@@ -93,7 +93,7 @@ export default function SearchForm({ destinations }: SearchFormProps) {
                       </div>
                     </div>
 
-                    <div className="col-xl-4 col-md-4">
+                    <div className="search-field-bg" style={{ flex: '1 1 calc(33.333% - 1rem)', minWidth: '250px' }}>
                       <div className="checkout-wrapper d-flex flex-column">
                         <label className="tw-text-sm fw-normal font-body d-flex align-content-center tw-gap-4 tw-mb-2">
                           <span><img src="assets/images/icon/checkout-icon2.svg" alt="icon" /></span> Activity
@@ -114,7 +114,7 @@ export default function SearchForm({ destinations }: SearchFormProps) {
                       </div>
                     </div>
 
-                    <div className="col-xl-4 col-md-4">
+                    <div className="search-field-bg" style={{ flex: '1 1 calc(33.333% - 1rem)', minWidth: '250px' }}>
                       <div className="checkout-wrapper d-flex flex-column">
                         <label className="tw-text-sm fw-normal font-body d-flex align-content-center tw-gap-4 tw-mb-2">
                           <span><img src="assets/images/icon/checkout-icon3.svg" alt="icon" /></span> Departure Date
@@ -132,8 +132,8 @@ export default function SearchForm({ destinations }: SearchFormProps) {
                   </div>
 
                   {/* Second Row: Guests, Email, Phone, Submit */}
-                  <div className="row">
-                    <div className="col-xl-3 col-md-3">
+                  <div className="d-flex flex-wrap">
+                    <div className="search-field-bg" style={{ flex: '1 1 calc(25% - 1rem)', minWidth: '200px' }}>
                       <div className="checkout-wrapper d-flex flex-column">
                         <label className="tw-text-sm fw-normal font-body d-flex align-content-center tw-gap-4 tw-mb-2">
                           <span><img src="assets/images/icon/checkout-icon4.svg" alt="icon" /></span> Guests
@@ -154,7 +154,7 @@ export default function SearchForm({ destinations }: SearchFormProps) {
                       </div>
                     </div>
 
-                    <div className="col-xl-3 col-md-3">
+                    <div className="search-field-bg" style={{ flex: '1 1 calc(25% - 1rem)', minWidth: '200px' }}>
                       <div className="checkout-wrapper d-flex flex-column">
                         <label className="tw-text-sm fw-normal font-body d-flex align-content-center tw-gap-4 tw-mb-2">
                           <span><img src="assets/images/icon/checkout-icon1.svg" alt="icon" /></span> Email
@@ -171,7 +171,7 @@ export default function SearchForm({ destinations }: SearchFormProps) {
                       </div>
                     </div>
 
-                    <div className="col-xl-3 col-md-3">
+                    <div className="search-field-bg" style={{ flex: '1 1 calc(25% - 1rem)', minWidth: '200px' }}>
                       <div className="checkout-wrapper d-flex flex-column">
                         <label className="tw-text-sm fw-normal font-body d-flex align-content-center tw-gap-4 tw-mb-2">
                           <span><img src="assets/images/icon/checkout-icon2.svg" alt="icon" /></span> Phone
@@ -188,7 +188,7 @@ export default function SearchForm({ destinations }: SearchFormProps) {
                       </div>
                     </div>
 
-                    <div className="col-xl-3 col-md-3">
+                    <div className="search-field-bg" style={{ flex: '1 1 calc(25% - 1rem)', minWidth: '200px' }}>
                       <div className="checkout-wrapper">
                         <label className="tw-text-sm fw-normal font-body d-flex align-content-center tw-gap-4 tw-mb-2" style={{ visibility: 'hidden' }}>
                           Submit
@@ -197,7 +197,7 @@ export default function SearchForm({ destinations }: SearchFormProps) {
                           <button
                             type="submit"
                             disabled={loading}
-                            className="primary-btn bg-main-600 text-white tw-py-4 tw-px-10 fs-15 text-capitalize fw-bold font-heading tw-gap-2 d-inline-flex align-items-center tw-rounded-4xl w-100 justify-content-center"
+                            className="primary-btn bg-main-600 text-white tw-py-4 tw-px-10 fs-15 text-capitalize fw-bold font-heading tw-gap-2 d-flex align-items-center tw-rounded-4xl w-100 justify-content-center"
                           >
                             {loading ? 'Submitting...' : 'Submit'}
                             <span><img src="assets/images/icon/search-btn.svg" alt="search" /></span>

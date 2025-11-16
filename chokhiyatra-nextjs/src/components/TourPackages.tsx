@@ -264,7 +264,7 @@ export default function TourPackages() {
           </svg>
         </div>
       </div>
-      <div>
+      <div className="d-none d-md-block">
         <img className="testimonial-bg-shape position-absolute start-0 z-n1"
           src="assets/images/testimonial/testimonial-bg-shape.png" alt="shape"/>
       </div>

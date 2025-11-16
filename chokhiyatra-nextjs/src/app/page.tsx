@@ -35,11 +35,11 @@ export default async function HomePage() {
       <AdvanceGallery />
 
       {/* ChokhiYatra Intro Section */}
-      <section className="position-relative z-1">
+      <section className="position-relative z-1 py-5 py-md-8">
         <div className="container">
           <div className="row justify-content-center">
-            <div className="col-xl-10">
-              <div className="text-center">
+            <div className="col-xl-10 col-lg-11 col-md-12">
+              <div className="text-center px-3 px-md-0">
                 <h2 className="ChokhiYatra-title fw-normal tw-mb-5">ChokhiYatra</h2>
                 <div className="ChokhiYatra-content tp-cursor-point-area">
                   <h6 className="ChokhiYatra-text fw-normal">Your <span className="fw-bold">trusted travel partner</span> since <span
@@ -50,7 +50,7 @@ export default async function HomePage() {
             </div>
           </div>
         </div>
-        <div className="ChokhiYatra-plane-shape position-absolute start-0 translate-middle-y z-n1">
+        <div className="ChokhiYatra-plane-shape position-absolute start-0 translate-middle-y z-n1 d-none d-md-block">
           <div className="line_shape">
             <svg width="1920" height="287" viewBox="0 0 1920 287" fill="none"
               xmlns="http://www.w3.org/2000/svg">
@@ -69,20 +69,20 @@ export default async function HomePage() {
       {/* Popular Destinations Section */}
       <section className="py-140 position-relative z-1">
         <div className="container">
-          <div className="row align-items-center justify-content-between">
-            <div className="col-xl-6 col-lg-7">
-              <div className="section-wrapper tw-mb-14" data-aos="fade-up" data-aos-duration="1000"
+          <div className="row align-items-center justify-content-between g-4">
+            <div className="col-xl-6 col-lg-7 col-md-12">
+              <div className="section-wrapper tw-mb-14 px-3 px-md-0" data-aos="fade-up" data-aos-duration="1000"
                 data-aos-delay="200">
-                <h6 className="section-subtitle font-sofia tw-text-2xl fw-normal tw-mb-4">Populer
+                <h6 className="section-subtitle font-sofia tw-text-2xl fw-normal tw-mb-4">Popular
                   Destination</h6>
-                <h2 className="section-title fw-normal tw-mb-7 char-animation">Populer destination</h2>
+                <h2 className="section-title fw-normal tw-mb-7 char-animation">Popular destination</h2>
                 <p className="tw-text-lg fw-normal">communication and utilizes cutting edge logistic
                   planning to get your shipment completed
                   on time. itself founded of backgrounds, which simply.</p>
               </div>
             </div>
-            <div className="col-xl-3 col-lg-4">
-              <div className="counter-button project-two-button d-flex flex-wrap"
+            <div className="col-xl-3 col-lg-4 col-md-12">
+              <div className="counter-button project-two-button d-flex flex-wrap px-3 px-md-0 justify-content-center justify-content-lg-end"
                 data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
                 <a className="primary-btn bg-main-two-600 text-main-600 tw-py-4 tw-px-8 fs-15 text-uppercase fw-bold font-heading tw-gap-2 d-inline-flex align-items-center tw-rounded-4xl"
                   href="destination-details.html">explore more <i
@@ -91,7 +91,7 @@ export default async function HomePage() {
             </div>
           </div>
         </div>
-        <div className="container-fluid gx-0">
+        <div className="container-fluid gx-0 px-3 px-md-0">
           <div className="row">
             <div className="project-two-slider">
               <div className="project-two-active swiper-container">
@@ -209,10 +209,10 @@ export default async function HomePage() {
             </div>
           </div>
         </div>
-        <div className="project-bg">
+        <div className="project-bg d-none d-md-block">
           <img src="assets/images/project/project-bg.jpg" alt="bg" />
         </div>
-        <div className="project-bg-shape">
+        <div className="project-bg-shape d-none d-md-block">
           <img className="project-bg-shape-3 position-absolute start-0 z-1"
             src="assets/images/project/project-bg-shape3.png" alt="shape" />
         </div>
@@ -226,11 +226,11 @@ export default async function HomePage() {
       <section className="catagori-area py-140 position-relative z-1">
         <div className="container">
           <div className="row justify-content-center">
-            <div className="col-xl-8">
-              <div className="section-wrapper text-center tw-pt-20 tw-mb-19" data-aos="fade-up"
+            <div className="col-xl-8 col-lg-10 col-md-12">
+              <div className="section-wrapper text-center tw-pt-20 tw-mb-19 px-3 px-md-4" data-aos="fade-up"
                 data-aos-duration="1000" data-aos-delay="200">
                 <h6 className="section-subtitle font-sofia tw-text-2xl fw-normal tw-mb-4">tour
-                  catagorires</h6>
+                  categories</h6>
                 <h2 className="section-title fw-normal tw-mb-7 char-animation text-white"> Shelter of
                   Love, Compassion,
                   and New Beginnings</h2>
@@ -332,10 +332,10 @@ export default async function HomePage() {
       <section className="py-140">
         <div className="container">
           <div className="row justify-content-center">
-            <div className="col-xl-10">
-              <div className="ChokhiYatra-content tp-cursor-point-area text-center tw-mb-14">
-                <h6 className="ChokhiYatra-text fw-normal">
-                  Since <span className="fw-bold">2009</span>, we’ve been crafting journeys filled with comfort, care, and memories that last a lifetime. Wherever you go, go with us.
+            <div className="col-xl-10 col-lg-11 col-md-12">
+              <div className="ChokhiYatra-content tp-cursor-point-area text-center tw-mb-14 px-3 px-md-4">
+                <h6 className="gallery-section-text fw-normal">
+                  Since <span className="fw-bold">2009</span>, we've been crafting journeys filled with comfort, care, and memories that last a lifetime. Wherever you go, go with us.
                 </h6>
               </div>
             </div>
@@ -405,9 +405,9 @@ export default async function HomePage() {
       {/* Services Section */}
       <section className="services-area blog-panel-area py-140">
         <div className="container">
-          <div className="row align-items-center justify-content-between">
-            <div className="col-xl-6 col-lg-7">
-              <div className="section-wrapper tw-mb-14" data-aos="fade-up" data-aos-duration="1000"
+          <div className="row align-items-center justify-content-between g-4">
+            <div className="col-xl-6 col-lg-7 col-md-12">
+              <div className="section-wrapper tw-mb-14 px-3 px-md-0" data-aos="fade-up" data-aos-duration="1000"
                 data-aos-delay="200">
                 <h6 className="section-subtitle font-sofia tw-text-2xl fw-normal tw-mb-4">Our Services
                 </h6>
@@ -415,8 +415,8 @@ export default async function HomePage() {
                 <p className="tw-text-lg fw-normal">Discover our comprehensive travel services designed to make your journey seamless and unforgettable.</p>
               </div>
             </div>
-            <div className="col-xl-3 col-lg-4">
-              <div className="counter-button project-two-button d-flex justify-content-end flex-wrap"
+            <div className="col-xl-3 col-lg-4 col-md-12">
+              <div className="counter-button project-two-button d-flex justify-content-center justify-content-lg-end flex-wrap px-3 px-md-0"
                 data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
                 <a className="primary-btn bg-main-two-600 text-main-600 tw-py-4 tw-px-8 fs-15 text-uppercase fw-bold font-heading tw-gap-2 d-inline-flex align-items-center tw-rounded-4xl"
                   href="/contact">explore more <i className="ph ph-arrow-up-right"></i></a>
@@ -433,19 +433,19 @@ export default async function HomePage() {
                   return (
                     <div key={service._id} className="row blog-panel tw-mb-8 tw-mt-8">
                       <div className="col-xl-12">
-                        <div className="blog-two-wrapper tw-rounded-xl d-flex align-items-center justify-content-center tw-p-2">
-                          <div className={`blog-two-thumb ${isImageLeft ? 'order-1' : 'order-2'}`} style={{width: "40%"}} >
-                            <img src={imageUrl} alt={service.title} />
+                        <div className="blog-two-wrapper tw-rounded-xl d-flex flex-column flex-md-row align-items-center justify-content-center tw-p-2 tw-gap-4">
+                          <div className={`blog-two-thumb w-100 ${isImageLeft ? 'order-md-1' : 'order-md-2'}`} style={{maxWidth: '400px'}}>
+                            <img src={imageUrl} alt={service.title} className="w-100 h-auto tw-rounded-lg" />
                           </div>
-                          <div className={`blog-two-content ${isImageLeft ? 'order-2' : 'order-1'}`} style={{width: "50%"}} >
-                            <h4 className="blog-two-title tw-text-9 text-capitalize fw-normal tw-mb-6 tw-ms-4">
+                          <div className={`blog-two-content w-100 ${isImageLeft ? 'order-md-2' : 'order-md-1'}`}>
+                            <h4 className="blog-two-title text-capitalize fw-normal tw-mb-6 ms-0 ms-md-4 tw-text-9">
                               {service.title}
                             </h4>
-                            <p className="tw-text-lg tw-ms-4 tw-mb-6">
+                            <p className="tw-text-lg ms-0 ms-md-4 tw-mb-6">
                               {service.description}
                             </p>
                             {service.features && service.features.length > 0 && (
-                              <ul className="tw-ms-4 tw-mb-6 tw-list-none tw-space-y-2">
+                              <ul className="ms-0 ms-md-4 tw-mb-6 tw-list-none tw-space-y-2">
                                 {service.features.map((feature: string, idx: number) => (
                                   <li key={idx} className="tw-flex tw-items-start tw-gap-2">
                                     <span className="tw-text-main-600 tw-mt-1">✔&nbsp;</span>
@@ -454,7 +454,7 @@ export default async function HomePage() {
                                 ))}
                               </ul>
                             )}
-                            <div className="blog-two-button tw-ms-4">
+                            <div className="blog-two-button ms-0 ms-md-4">
                               <a className="text-black fw-medium d-inline-flex tw-gap-4" href="/contact">
                                 Learn More <span><img src="assets/images/icon/blog-two-arrow.svg" alt="arrow" /></span>
                               </a>
@@ -551,11 +551,11 @@ export default async function HomePage() {
         data-background-image="assets/images/cta/cta-bg.jpg">
         <div className="container">
           <div className="row justify-content-center tw-pb-20">
-            <div className="col-xl-10">
-              <div className="section-wrapper text-center position-relative z-1" data-aos="fade-up"
+            <div className="col-xl-10 col-lg-11 col-md-12">
+              <div className="section-wrapper text-center position-relative z-1 px-3 px-md-4" data-aos="fade-up"
                 data-aos-duration="1000" data-aos-delay="200">
                 <h2 className="section-title fw-normal tw-mb-7 char-animation text-white char-animation">
-                  <span className="text-main-600">Let&apos;sCapture</span> BeautyoftheWorld
+                  <span className="text-main-600">Let&apos;s Capture</span> Beauty of the World
                 </h2>
                 <div className="gallery-button d-flex justify-content-center">
                   <a className="primary-btn bg-main-two-600 text-main-600 tw-py-4 tw-px-8 fs-15 text-capitalize fw-bold font-heading tw-gap-2 d-inline-flex align-items-center tw-rounded-4xl"
