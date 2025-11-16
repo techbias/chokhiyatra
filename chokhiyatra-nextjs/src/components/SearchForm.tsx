@@ -78,8 +78,8 @@ export default function SearchForm({ destinations }: SearchFormProps) {
                           <span><img src="assets/images/icon/checkout-icon1.svg" alt="icon" /></span> Destination
                         </label>
                         <select
-                          className="form-select tw-py-3 tw-px-0 tw-rounded-md tw-border-0"
-                          style={{ border: 'none', paddingLeft: 0, paddingRight: 0, outline: 'none', boxShadow: 'none' }}
+                          className="form-select tw-py-3 tw-px-3 tw-rounded-md tw-border-0 w-100"
+                          style={{ border: 'none', outline: 'none', boxShadow: 'none' }}
                           value={formData.destination}
                           onChange={(e) => setFormData({ ...formData, destination: e.target.value })}
                         >
@@ -99,8 +99,8 @@ export default function SearchForm({ destinations }: SearchFormProps) {
                           <span><img src="assets/images/icon/checkout-icon2.svg" alt="icon" /></span> Activity
                         </label>
                         <select
-                          className="form-select tw-py-3 tw-px-0 tw-rounded-md tw-border-0"
-                          style={{ border: 'none', paddingLeft: 0, paddingRight: 0, outline: 'none', boxShadow: 'none' }}
+                          className="form-select tw-py-3 tw-px-3 tw-rounded-md tw-border-0 w-100"
+                          style={{ border: 'none', outline: 'none', boxShadow: 'none' }}
                           value={formData.activity}
                           onChange={(e) => setFormData({ ...formData, activity: e.target.value })}
                         >
@@ -121,8 +121,8 @@ export default function SearchForm({ destinations }: SearchFormProps) {
                         </label>
                         <input
                           type="date"
-                          className="form-control tw-py-3 tw-px-0 tw-rounded-md tw-border-0"
-                          style={{ border: 'none', paddingLeft: 0, paddingRight: 0, outline: 'none', boxShadow: 'none' }}
+                          className="form-control tw-py-3 tw-px-3 tw-rounded-md tw-border-0 w-100"
+                          style={{ border: 'none', outline: 'none', boxShadow: 'none' }}
                           value={formData.date}
                           onChange={(e) => setFormData({ ...formData, date: e.target.value })}
                           min={new Date().toISOString().split('T')[0]}
@@ -139,8 +139,8 @@ export default function SearchForm({ destinations }: SearchFormProps) {
                           <span><img src="assets/images/icon/checkout-icon4.svg" alt="icon" /></span> Guests
                         </label>
                         <select
-                          className="form-select tw-py-3 tw-px-0 tw-rounded-md tw-border-0"
-                          style={{ border: 'none', paddingLeft: 0, paddingRight: 0, outline: 'none', boxShadow: 'none' }}
+                          className="form-select tw-py-3 tw-px-3 tw-rounded-md tw-border-0 w-100"
+                          style={{ border: 'none', outline: 'none', boxShadow: 'none' }}
                           value={formData.guests}
                           onChange={(e) => setFormData({ ...formData, guests: e.target.value })}
                         >
@@ -161,8 +161,8 @@ export default function SearchForm({ destinations }: SearchFormProps) {
                         </label>
                         <input
                           type="email"
-                          className="form-control tw-py-3 tw-px-0 tw-rounded-md tw-border-0"
-                          style={{ border: 'none', paddingLeft: 0, paddingRight: 0, outline: 'none', boxShadow: 'none' }}
+                          className="form-control tw-py-3 tw-px-3 tw-rounded-md tw-border-0 w-100"
+                          style={{ border: 'none', outline: 'none', boxShadow: 'none' }}
                           value={formData.email}
                           onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                           placeholder="Your email address"
@@ -178,8 +178,8 @@ export default function SearchForm({ destinations }: SearchFormProps) {
                         </label>
                         <input
                           type="tel"
-                          className="form-control tw-py-3 tw-px-0 tw-rounded-md tw-border-0"
-                          style={{ border: 'none', paddingLeft: 0, paddingRight: 0, outline: 'none', boxShadow: 'none' }}
+                          className="form-control tw-py-3 tw-px-3 tw-rounded-md tw-border-0 w-100"
+                          style={{ border: 'none', outline: 'none', boxShadow: 'none' }}
                           value={formData.phone}
                           onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                           placeholder="Your phone number"
