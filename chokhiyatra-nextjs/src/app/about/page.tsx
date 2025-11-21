@@ -18,7 +18,7 @@ export default async function AboutPage() {
   const services = await getServices();
 
   return (
-    <PageLayout services={services}>
+    <PageLayout>
       <Breadcrumb title="About Us" />
 
       {/* About Section */}

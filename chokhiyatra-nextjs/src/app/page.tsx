@@ -23,7 +23,7 @@ export default async function HomePage() {
   const popularDestinations = await getPopularDestinations();
   const services = await getServices();
   return (
-    <PageLayout services={services}>
+    <PageLayout>
       {/* Hero Slider Section */}
       <HeroSlider />
       {/* <BannerBackup/> */}
