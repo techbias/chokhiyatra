@@ -7,21 +7,11 @@ import Header from './Header';
 import Footer from './Footer';
 import Scripts from './Scripts';
 
-interface Service {
-  _id: string;
-  title: string;
-  description: string;
-  image: any;
-  order: number;
-  imagePosition: string;
-}
-
 interface PageLayoutProps {
   children: React.ReactNode;
-  services?: Service[];
 }
 
-export default function PageLayout({ children, services }: PageLayoutProps) {
+export default function PageLayout({ children }: PageLayoutProps) {
   return (
     <>
       <Preloader />
@@ -30,7 +20,7 @@ export default function PageLayout({ children, services }: PageLayoutProps) {
       <main>
         <div id="scrollSmoother-container">
           {children}
-          <Footer services={services} />
+          <Footer />
         </div>
       </main>
       <Scripts />
