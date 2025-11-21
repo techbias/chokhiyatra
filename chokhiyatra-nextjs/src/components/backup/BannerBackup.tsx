@@ -15,7 +15,7 @@ export default function BannerBackup() {
               <h1 className="banner-two-title text-uppercase tw-mb-19 char-animation">Explore <span
                 className="fw-normal fst-italic">the World</span></h1>
               <div className="banner-two-button">
-                <a className="primary-btn bg-main-two-600 text-main-600 tw-py-5 tw-px-18 fs-15 text-capitalize fw-bold font-heading tw-gap-2 d-inline-flex align-items-center tw-rounded-4xl"
+                <a className="primary-btn bg-main-two-600 text-white tw-py-5 tw-px-18 fs-15 text-capitalize fw-bold font-heading tw-gap-2 d-inline-flex align-items-center tw-rounded-4xl"
                   href="/contact">See all destination <i
                     className="ph ph-arrow-up-right"></i></a>
               </div>

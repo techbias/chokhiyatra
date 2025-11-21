@@ -121,18 +121,18 @@ $font-sizes: (
   --heading-six: clamp(1rem, 0.769rem + 0.6813vw, 1.25rem); // Min: 16px - Max-20px
   /* Font Size End */
 
-  /* template one main color */
-  --main-h: 215;
-  --main-s: 75%;
-  --main-l: 26%;
+  /* template one main color #0C2C32*/
+  --main-h: 189;
+  --main-s: 61%;
+  --main-l: 12%;
   --main: var(--main-h) var(--main-s) var(--main-l);
 
 
-  /* template two main color */
-  --main-two-h: 39;
-  --main-two-s: 100%;
-  --main-two-l: 69%;
-  --main-two: var(--main-h) var(--main-s) var(--main-l);
+  /* template two main color #4C7D83 */ 
+  --main-two-h: 187;
+  --main-two-s: 27%;
+  --main-two-l: 41%;
+  --main-two: var(--main-two-h) var(--main-two-s) var(--main-two-l);
 
 
    /* White Color */

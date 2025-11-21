@@ -3,20 +3,7 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 
-interface Service {
-  _id: string;
-  title: string;
-  description: string;
-  image: any;
-  order: number;
-  imagePosition: string;
-}
-
-interface FooterProps {
-  services?: Service[];
-}
-
-const Footer: React.FC<FooterProps> = ({ services = [] }) => {
+const Footer: React.FC = () => {
   const [email, setEmail] = useState('');
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
@@ -129,7 +116,7 @@ const Footer: React.FC<FooterProps> = ({ services = [] }) => {
                 <ul className="d-flex justify-content-center tw-gap-2">
                   <li>
                     <a
-                      href="https://www.facebook.com"
+                      href="https://www.facebook.com/chokhiyatra"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="tw-w-10 tw-h-10 d-inline-flex align-items-center justify-content-center bg-white tw-rounded-lg text-main-600 tw-text-xl"
@@ -139,17 +126,7 @@ const Footer: React.FC<FooterProps> = ({ services = [] }) => {
                   </li>
                   <li>
                     <a
-                      href="https://www.twitter.com"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="tw-w-10 tw-h-10 d-inline-flex align-items-center justify-content-center bg-white tw-rounded-lg text-main-600 tw-text-xl"
-                    >
-                      <i className="ph-bold ph-twitter-logo"></i>
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="https://www.linkedin.com"
+                      href="https://www.instagram.com/chokhiyatra"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="tw-w-10 tw-h-10 d-inline-flex align-items-center justify-content-center bg-white tw-rounded-lg text-main-600 tw-text-xl"
@@ -157,27 +134,22 @@ const Footer: React.FC<FooterProps> = ({ services = [] }) => {
                       <i className="ph-bold ph-instagram-logo"></i>
                     </a>
                   </li>
-                  <li>
-                    <a
-                      href="https://www.pinterest.com"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="tw-w-10 tw-h-10 d-inline-flex align-items-center justify-content-center bg-white tw-rounded-lg text-main-600 tw-text-xl"
-                    >
-                      <i className="ph-bold ph-pinterest-logo"></i>
-                    </a>
-                  </li>
                 </ul>
               </div>
             </div>
 
-            {/* My Account & Service Columns */}
+            {/* Quick Links & Policies Columns */}
             <div className="col-xl-5 col-lg-8 col-md-12 col-sm-12 col-xs-12">
               <div className="footer-right d-flex tw-gap-8">
-                {/* My Account Column */}
+                {/* Quick Links Column */}
                 <div className="footer-col-three" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
-                  <h4 className="cursor-big tw-text-2xl tw-mb-8">My account</h4>
+                  <h4 className="cursor-big tw-text-2xl tw-mb-8">Quick Links</h4>
                   <ul className="d-flex flex-column tw-gap-4">
+                    <li>
+                      <a href="/about" className="footer-link hover-underline">
+                        About Us
+                      </a>
+                    </li>
                     <li>
                       <a href="/contact" className="footer-link hover-underline">
                         Contact Us
@@ -185,68 +157,46 @@ const Footer: React.FC<FooterProps> = ({ services = [] }) => {
                     </li>
                     <li>
                       <a href="/faq" className="footer-link hover-underline">
-                        FAQ Page
+                        FAQ
                       </a>
                     </li>
                     <li>
-                      <a href="/contact" className="footer-link hover-underline">
-                        Get In Touch
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#" className="footer-link hover-underline">
-                        Global Network
+                      <a href="/web-checkin" className="footer-link hover-underline">
+                        Web Check-in
                       </a>
                     </li>
                     <li className="mb-0">
-                      <a href="#" className="footer-link hover-underline">
-                        Suport 24/7
+                      <a href="https://wa.me/919413131000" target="_blank" rel="noopener noreferrer" className="footer-link hover-underline">
+                        Support 24/7
                       </a>
                     </li>
                   </ul>
                 </div>
 
-                {/* Service Column */}
+                {/* Policies Column */}
                 <div className="footer-col-four" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
-                  <h4 className="cursor-big tw-text-2xl tw-mb-8">Service</h4>
+                  <h4 className="cursor-big tw-text-2xl tw-mb-8">Policies</h4>
                   <ul className="d-flex flex-column tw-gap-4">
-                    {services && services.length > 0 ? (
-                      services.slice(0, 5).map((service) => (
-                        <li key={service._id}>
-                          <a href="/contact" className="footer-link hover-underline">
-                            {service.title}
-                          </a>
-                        </li>
-                      ))
-                    ) : (
-                      <>
-                        <li>
-                          <a href="#" className="footer-link hover-underline">
-                            Historical & Cultural Tours
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#" className="footer-link hover-underline">
-                            Adventure & Outdoor Tours
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#" className="footer-link hover-underline">
-                            Wildlife & Safari Tours
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#" className="footer-link hover-underline">
-                            Luxury & Relaxation Tours
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#" className="footer-link hover-underline">
-                            Photography & Scenic Tours
-                          </a>
-                        </li>
-                      </>
-                    )}
+                    <li>
+                      <a href="/privacy-policy" className="footer-link hover-underline">
+                        Privacy Policy
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/terms-conditions" className="footer-link hover-underline">
+                        Terms & Conditions
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/refund-policy" className="footer-link hover-underline">
+                        Refund Policy
+                      </a>
+                    </li>
+                    <li className="mb-0">
+                      <a href="/cancellation-policy" className="footer-link hover-underline">
+                        Cancellation Policy
+                      </a>
+                    </li>
                   </ul>
                 </div>
               </div>
@@ -261,7 +211,7 @@ const Footer: React.FC<FooterProps> = ({ services = [] }) => {
           <div className="container container-two">
             <div className="footer-copyright-wrap d-flex align-items-center justify-content-between flex-wrap">
               <p className="text-line-1 fw-normal text-main-600">
-                Copyright - ChokhiYatra<span className="fw-semibold"></span> Design & • Developed with love by <a href="https://www.techbias.in" target="_blank">TechBias</a></p>
+                © 2025 - ChokhiYatra Private Limited<span className="fw-semibold"></span> • Design & Developed by <a href="https://www.techbias.in" target="_blank">TechBias</a></p>
               <div className="">
                 <ul className="footer-copyright-social d-flex tw-gap-16">
                   <li>

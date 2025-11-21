@@ -84,7 +84,7 @@ export default async function HomePage() {
             <div className="col-xl-3 col-lg-4 col-md-12">
               <div className="counter-button project-two-button d-flex flex-wrap px-3 px-md-0 justify-content-center justify-content-lg-end"
                 data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
-                <a className="primary-btn bg-main-two-600 text-main-600 tw-py-4 tw-px-8 fs-15 text-uppercase fw-bold font-heading tw-gap-2 d-inline-flex align-items-center tw-rounded-4xl"
+                <a className="primary-btn bg-main-two-600 text-white tw-py-4 tw-px-8 fs-15 text-uppercase fw-bold font-heading tw-gap-2 d-inline-flex align-items-center tw-rounded-4xl"
                   href="destination-details.html">explore more <i
                     className="ph ph-arrow-up-right"></i></a>
               </div>
@@ -418,7 +418,7 @@ export default async function HomePage() {
             <div className="col-xl-3 col-lg-4 col-md-12">
               <div className="counter-button project-two-button d-flex justify-content-center justify-content-lg-end flex-wrap px-3 px-md-0"
                 data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
-                <a className="primary-btn bg-main-two-600 text-main-600 tw-py-4 tw-px-8 fs-15 text-uppercase fw-bold font-heading tw-gap-2 d-inline-flex align-items-center tw-rounded-4xl"
+                <a className="primary-btn bg-main-two-600 text-white tw-py-4 tw-px-8 fs-15 text-uppercase fw-bold font-heading tw-gap-2 d-inline-flex align-items-center tw-rounded-4xl"
                   href="/contact">explore more <i className="ph ph-arrow-up-right"></i></a>
               </div>
             </div>
@@ -558,7 +558,7 @@ export default async function HomePage() {
                   <span className="text-main-600">Let&apos;s Capture</span> Beauty of the World
                 </h2>
                 <div className="gallery-button d-flex justify-content-center">
-                  <a className="primary-btn bg-main-two-600 text-main-600 tw-py-4 tw-px-8 fs-15 text-capitalize fw-bold font-heading tw-gap-2 d-inline-flex align-items-center tw-rounded-4xl"
+                  <a className="primary-btn bg-main-two-600 text-white tw-py-4 tw-px-8 fs-15 text-capitalize fw-bold font-heading tw-gap-2 d-inline-flex align-items-center tw-rounded-4xl"
                     href="/contact">Book Today <i className="ph ph-arrow-up-right"></i></a>
                 </div>
                 <div className="gallery-shape">

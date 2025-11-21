@@ -29,7 +29,7 @@ export default function DestinationPage() {
               </div>
               <div className="col-xl-3 col-lg-4">
                 <div className="counter-button project-two-button d-flex justify-content-end flex-wrap" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
-                  <a className="primary-btn bg-main-two-600 text-main-600 tw-py-4 tw-px-8 fs-15 text-uppercase fw-bold font-heading tw-gap-2 d-inline-flex align-items-center tw-rounded-4xl home-three-btn" href="#">explore more <i className="ph ph-arrow-up-right"></i></a>
+                  <a className="primary-btn bg-main-two-600 text-white tw-py-4 tw-px-8 fs-15 text-uppercase fw-bold font-heading tw-gap-2 d-inline-flex align-items-center tw-rounded-4xl home-three-btn" href="#">explore more <i className="ph ph-arrow-up-right"></i></a>
                 </div>
               </div>
             </div>
@@ -408,7 +408,7 @@ export default function DestinationPage() {
                 <div className="section-wrapper text-center position-relative z-1" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
                   <h2 className="section-title fw-normal tw-mb-7 char-animation text-white char-animation"> <span className="text-main-600">Let'sCapture</span> BeautyoftheWorld</h2>
                   <div className="gallery-button d-flex justify-content-center">
-                    <a className="primary-btn bg-main-two-600 text-main-600 tw-py-4 tw-px-8 fs-15 text-capitalize fw-bold font-heading tw-gap-2 d-inline-flex align-items-center tw-rounded-4xl" href="/contact">Book Today <i className="ph ph-arrow-up-right"></i></a>
+                    <a className="primary-btn bg-main-two-600 text-white tw-py-4 tw-px-8 fs-15 text-capitalize fw-bold font-heading tw-gap-2 d-inline-flex align-items-center tw-rounded-4xl" href="/contact">Book Today <i className="ph ph-arrow-up-right"></i></a>
                   </div>
                   <div className="gallery-shape">
                     <img className="gallery-shape-1 position-absolute start-0 z-n1" src="assets/images/gallery/gallery-shape1.png" alt="shape" />

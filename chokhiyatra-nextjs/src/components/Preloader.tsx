@@ -10,10 +10,11 @@ export default function Preloader() {
       <div className="animation-preloader">
         <div className="spinner">
           <Image
-            src="/assets/images/loader.gif"
+            // src="/assets/images/loader.gif"
+            src="/assets/images/flight.png"
             alt="Loading"
-            width={100}
-            height={100}
+            width={700}
+            height={400}
           />
         </div>
         <div className="txt-loading">
